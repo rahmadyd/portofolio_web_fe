@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <defs>
+    <filter id="glow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="6" result="blur" />
+      <feComponentTransfer in="blur" result="glow1">
+        <feFuncA type="linear" slope="1.5"/>
+      </feComponentTransfer>
+      <feMerge>
+        <feMergeNode in="glow1"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <radialGradient id="grad" cx="40%" cy="30%" r="60%">
+      <stop offset="0%" stop-color="#ff8fab"/>
+      <stop offset="40%" stop-color="#e60039"/>
+      <stop offset="80%" stop-color="#800020"/>
+      <stop offset="100%" stop-color="#4a0012"/>
+    </radialGradient>
+  </defs>
+
+  <g filter="url(#glow)">
+    <!-- Outer rim for glow -->
+    <circle cx="50" cy="50" r="37" fill="#e60039" opacity="0.3" />
+    
+    <!-- Base Gem -->
+    <circle cx="50" cy="50" r="35" fill="url(#grad)" />
+    
+    <!-- Center Table -->
+    <polygon points="40,35 60,35 68,50 60,65 40,65 32,50" fill="#ffb3c6" opacity="0.4"/>
+    
+    <!-- Star Facets -->
+    <polygon points="50,15 40,35 60,35" fill="#ffccd5" opacity="0.7"/>
+    <polygon points="85,50 68,50 60,35" fill="#ff99b3" opacity="0.5"/>
+    <polygon points="85,50 68,50 60,65" fill="#b3002c" opacity="0.6"/>
+    <polygon points="50,85 40,65 60,65" fill="#660019" opacity="0.8"/>
+    <polygon points="15,50 32,50 40,65" fill="#990026" opacity="0.7"/>
+    <polygon points="15,50 32,50 40,35" fill="#ffb3c6" opacity="0.8"/>
+    
+    <!-- Upper Girdle Facets -->
+    <polygon points="50,15 85,50 60,35" fill="#ff4d79" opacity="0.5"/>
+    <polygon points="85,50 50,85 60,65" fill="#4d0013" opacity="0.6"/>
+    <polygon points="50,85 15,50 40,65" fill="#660019" opacity="0.6"/>
+    <polygon points="15,50 50,15 40,35" fill="#ff668c" opacity="0.7"/>
+    
+    <!-- Specular Highlight -->
+    <ellipse cx="38" cy="28" rx="7" ry="3" transform="rotate(-40 38 28)" fill="#ffffff" opacity="0.8" />
+    <polygon points="34,27 42,29 40,31" fill="#ffffff" opacity="0.5" />
+  </g>
+</svg>

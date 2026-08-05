@@ -1,0 +1,60 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-white text-ink font-sans antialiased overflow-x-hidden leading-relaxed;
+  }
+  h1, h2, h3, h4 {
+    @apply font-heading text-ink font-semibold tracking-[-0.01em];
+  }
+  ::selection {
+    @apply bg-yellow-soft text-ink;
+  }
+  a:focus-visible, button:focus-visible {
+    @apply outline-2 outline-blue outline-offset-4 rounded;
+  }
+}
+
+@layer utilities {
+  .hero-bg {
+    background: radial-gradient(680px 380px at 88% -10%, #FBE4E7 0%, rgba(251, 228, 231, 0) 70%),
+                radial-gradient(600px 400px at -10% 20%, #F7F1F1 0%, rgba(247, 241, 241, 0) 70%);
+  }
+  .contact-bg-circle::before {
+    content: '';
+    position: absolute;
+    top: -120px;
+    right: -120px;
+    width: 340px;
+    height: 340px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(212, 42, 68, 0.18) 0%, rgba(212, 42, 68, 0) 70%);
+  }
+
+  .reveal {
+    opacity: 0;
+    transform: translateY(18px);
+    transition: opacity .7s ease, transform .7s ease;
+  }
+
+  .reveal.in {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  .reveal {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+}
