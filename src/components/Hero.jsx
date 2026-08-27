@@ -10,12 +10,10 @@ const Hero = () => {
             </span>
             <h1 className="text-[clamp(36px,5vw,56px)] leading-[1.05] mb-5">
               Rahmad Hidayad,<br />
-              <span className="text-blue">Frontend Developer</span> yang rapi dalam detail.
+              <span className="text-blue">AI/ML Engineer</span> & Software Developer Enthusiast.
             </h1>
             <p className="text-[17px] text-ink-soft max-w-[480px] mb-[30px]">
-              Membangun antarmuka web dari dashboard operasional sampai landing page perusahaan —
-              pakai React, Next.js, dan Tailwind CSS. Fokus pada kode yang bersih dan pengalaman pengguna yang
-              enak dipakai.
+              Merancang sistem cerdas berbasis AI, mengembangkan aplikasi web full-stack, dan menggabungkan machine learning dengan antarmuka user yang intuitif. Dari chatbot RAG sampai dashboard operasional — pakai Python, React, Next.js, dan LLM.
             </p>
             <div className="flex gap-[14px] flex-wrap mb-[36px]">
               <a 

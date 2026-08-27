@@ -35,19 +35,39 @@ const Experience = () => {
             </ul>
           </div>
 
+          <div className="flex flex-col md:flex-row justify-between items-start flex-wrap gap-4 mb-10 pb-6 border-b border-border-custom">
+            <div>
+              <h3 className="text-[22px] font-heading font-semibold text-ink">ProcodeCG</h3>
+              <div className="text-blue font-semibold text-[14.5px] mt-1">AI Engineer · Internship Project</div>
+            </div>
+            <span className="font-mono text-[12.5px] text-ink-faint bg-white-soft border border-border-custom py-[6px] px-3 rounded-full mt-2 md:mt-0">Okt 2025 – Nov 2025</span>
+          </div>
+
           <div className="border border-border-custom rounded-custom p-[28px] mb-5 relative transition-all duration-250 hover:shadow-custom hover:border-blue-line group">
-            <span className="font-mono text-[12px] text-yellow-deep mb-2 block">Proyek 02</span>
-            <h4 className="text-[18px] mb-1.5">Website Profil Perusahaan Quorvin</h4>
-            <div className="font-mono text-[12px] text-ink-faint mb-4">React 19 · Vite · React Router v7 · Tailwind CSS / Vanilla CSS · Formspree · GitHub Pages</div>
+            <span className="font-mono text-[12px] text-yellow-deep mb-2 block">Project</span>
+            <h4 className="text-[18px] mb-1.5">Chatbot COVID-19 Berbasis RAG & LLM Lokal</h4>
+            <div className="font-mono text-[12px] text-ink-faint mb-4">LangChain · FAISS · Sentence Transformers · Ollama · Mistral 7B · Streamlit · Python</div>
             <ul className="list-none flex flex-col gap-2.5">
               <li className="text-[14.5px] text-ink-soft pl-[18px] relative before:content-[''] before:absolute before:left-0 before:top-2 before:w-1.5 before:h-1.5 before:rounded-full before:bg-blue">
-                Mengembangkan website profil perusahaan berbasis SPA 4 halaman untuk konsultan AI dan Pengembangan Web menggunakan React 19 dan Vite.
+                Merancang dan mengimplementasikan chatbot COVID-19 berbahasa Indonesia berbasis Retrieval-Augmented Generation (RAG) menggunakan LangChain, FAISS, dan Sentence Transformers.
               </li>
               <li className="text-[14.5px] text-ink-soft pl-[18px] relative before:content-[''] before:absolute before:left-0 before:top-2 before:w-1.5 before:h-1.5 before:rounded-full before:bg-blue">
-                Merancang 11 komponen UI modular dengan sistem desain berbasis CSS Variables, penanganan formulir kontak asinkron via Formspree, dan navigasi adaptif.
+                Membangun pipeline pencarian semantik dengan model paraphrase-multilingual-mpnet-base-v2 dengan waktu pencarian dokumen &lt; 0.5 detik.
               </li>
               <li className="text-[14.5px] text-ink-soft pl-[18px] relative before:content-[''] before:absolute before:left-0 before:top-2 before:w-1.5 before:h-1.5 before:rounded-full before:bg-blue">
-                Mengatur alur deployment ke GitHub Pages dengan domain khusus, penanganan navigasi SPA, serta optimasi SEO (Open Graph, sitemap, robots.txt).
+                Mendesain sistem generasi jawaban berlapis (guaranteed answers, template responses, LLM generation, final fallback) dengan mekanisme fallback sempurna saat terjadi error atau timeout.
+              </li>
+              <li className="text-[14.5px] text-ink-soft pl-[18px] relative before:content-[''] before:absolute before:left-0 before:top-2 before:w-1.5 before:h-1.5 before:rounded-full before:bg-blue">
+                Mengintegrasikan Large Language Model lokal (Mistral 7B-Instruct) melalui Ollama dengan pembatasan konteks ketat untuk meminimalkan hallucination.
+              </li>
+              <li className="text-[14.5px] text-ink-soft pl-[18px] relative before:content-[''] before:absolute before:left-0 before:top-2 before:w-1.5 before:h-1.5 before:rounded-full before:bg-blue">
+                Mengimplementasikan guard rail system dua lapis (validasi input dan output) untuk menjaga chatbot tetap pada domain COVID-19 serta memblokir pertanyaan tidak relevan.
+              </li>
+              <li className="text-[14.5px] text-ink-soft pl-[18px] relative before:content-[''] before:absolute before:left-0 before:top-2 before:w-1.5 before:h-1.5 before:rounded-full before:bg-blue">
+                Mengembangkan aplikasi antarmuka menggunakan Streamlit dengan multiple chat rooms, penyimpanan riwayat percakapan, dan manajemen cache untuk observabilitas sistem.
+              </li>
+              <li className="text-[14.5px] text-ink-soft pl-[18px] relative before:content-[''] before:absolute before:left-0 before:top-2 before:w-1.5 before:h-1.5 before:rounded-full before:bg-blue">
+                Mencapai waktu respons end-to-end &lt; 10 detik dengan skor kualitas sistem 8.5/10 berdasarkan 18 metrik evaluasi performa dan keamanan.
               </li>
             </ul>
           </div>

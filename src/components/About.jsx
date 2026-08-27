@@ -9,26 +9,21 @@ const About = () => {
                 <span className="w-1.5 h-1.5 rounded-full bg-yellow shrink-0"></span>
                 Tentang
               </span>
-              <h2 className="text-[clamp(26px,3.2vw,34px)]">Dari mahasiswa teknik, fokus di frontend.</h2>
+              <h2 className="text-[clamp(26px,3.2vw,34px)]">Software Developer yang mendalami AI/ML Engineering.</h2>
             </div>
             <div className="flex flex-col gap-[18px]">
               <p className="text-ink-soft text-[16.5px]">
-                Saya <strong className="text-ink font-semibold">lulusan Teknik Komputer Telkom University</strong> yang menekuni pengembangan
-                web modern — membangun aplikasi dengan React dan Next.js, mengelola basis data, dan
-                mengintegrasikan API dari sisi antarmuka sampai ke detail interaksi kecilnya.
+                Saya <strong className="text-ink font-semibold">lulusan Teknik Komputer Telkom University</strong> dengan pengalaman mengembangkan aplikasi web modern dan sistem AI yang production-ready. Di frontend, saya build dengan <strong className="text-ink font-semibold">React, Next.js App Router, TypeScript, dan Tailwind CSS</strong> untuk menciptakan interface yang responsive dan performant. Di backend, saya gunakan <strong className="text-ink font-semibold">Node.js dengan REST API dan FastAPI</strong> untuk integration yang seamless.
               </p>
               <p className="text-ink-soft text-[16.5px]">
-                Pengalaman saya mencakup pembuatan dashboard operasional dengan puluhan komponen reusable,
-                website perusahaan berbasis SPA, hingga proyek riset yang menuntut ketelitian dalam optimasi
-                performa di sisi klien.
+                Untuk AI/ML engineering, saya merancang dan implementasi sistem RAG menggunakan <strong className="text-ink font-semibold">LangChain, FAISS, Sentence Transformers</strong>, serta mengintegrasikan LLM lokal dengan <strong className="text-ink font-semibold">Ollama (Mistral 7B)</strong> untuk solusi yang cost-efficient dan private. Dari dashboard telekomunikasi dengan Recharts hingga chatbot COVID-19 berbasis semantic search, saya terbiasa menggabungkan user experience yang intuitif dengan logika AI yang robust.
               </p>
               <p className="text-ink-soft text-[16.5px]">
-                Saat ini saya juga memperdalam <strong className="text-ink font-semibold">UI/UX design</strong> agar keputusan desain yang saya
-                ambil di kode selalu punya alasan yang jelas — bukan sekadar ikut template.
+                Tech stack saya: <strong className="text-ink font-semibold">Python & PyTorch</strong> untuk ML, <strong className="text-ink font-semibold">React/Next.js/TypeScript</strong> untuk frontend, <strong className="text-ink font-semibold">Node.js/PostgreSQL</strong> untuk backend. Untuk data processing, saya gunakan <strong className="text-ink font-semibold">Google BigQuery dan Looker Studio</strong>, serta deploy dengan <strong className="text-ink font-semibold">Vercel, Docker, dan GitHub</strong>. Saya juga experienced dengan computer vision menggunakan <strong className="text-ink font-semibold">YOLOv7 untuk object detection</strong> real-time.
               </p>
             </div>
             <p className="mt-6 pl-5 border-l-2 border-yellow font-heading text-[17px] text-ink font-medium">
-              "Kode yang bersih adalah bentuk lain dari desain yang baik."
+              "Build once, think twice — code dengan intention, deploy dengan confidence."
             </p>
           </div>
         </div>
