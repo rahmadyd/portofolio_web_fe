@@ -1,53 +1,68 @@
+import { useLanguage } from '../contexts/LanguageContext';
+
 const Skills = () => {
+  const { t } = useLanguage();
+
   const skillsCategories = [
     {
-      title: "Bahasa Pemrograman",
-      icon: "</>",
-      bgColor: "bg-yellow-soft",
-      textColor: "text-yellow-deep",
-      skills: ["JavaScript", "TypeScript", "Python", "C"]
-    },
-    {
-      title: "Frontend Development",
-      icon: "◧",
-      bgColor: "bg-yellow-soft",
-      textColor: "text-yellow-deep",
-      skills: ["React JS", "Next.js", "Tailwind CSS", "HTML5", "CSS3"]
-    },
-    {
-      title: "Backend & Integrasi",
-      icon: "⚡",
-      bgColor: "bg-yellow-soft",
-      textColor: "text-yellow-deep",
-      skills: ["Node.js", "REST API", "PostgreSQL"]
-    },
-    {
-      title: "AI/ML Engineering",
+      title: t({ id: 'AI & LLM', en: 'AI & LLM' }),
       icon: "🤖",
       bgColor: "bg-yellow-soft",
       textColor: "text-yellow-deep",
-      skills: ["PyTorch", "YOLOv7", "LangChain", "FAISS", "Sentence Transformers", "Ollama", "Mistral 7B", "RAG", "Dify", "Python ML"]
+      skills: t({
+        id: ['LangChain', 'RAG Systems', 'Semantic Search', 'FAISS', 'Sentence Transformers', 'Mistral 7B', 'Groq API', 'Ollama', 'LLM Guardrails', 'Prompt Engineering'],
+        en: ['LangChain', 'RAG Systems', 'Semantic Search', 'FAISS', 'Sentence Transformers', 'Mistral 7B', 'Groq API', 'Ollama', 'LLM Guardrails', 'Prompt Engineering']
+      })
     },
     {
-      title: "Data & Visualization",
+      title: t({ id: 'Computer Vision', en: 'Computer Vision' }),
+      icon: "👁️",
+      bgColor: "bg-yellow-soft",
+      textColor: "text-yellow-deep",
+      skills: t({
+        id: ['YOLOv7', 'PyTorch', 'Real-Time Detection', 'Model Optimization', 'Performance Evaluation'],
+        en: ['YOLOv7', 'PyTorch', 'Real-Time Detection', 'Model Optimization', 'Performance Evaluation']
+      })
+    },
+    {
+      title: t({ id: 'Data Engineering', en: 'Data Engineering' }),
       icon: "📊",
       bgColor: "bg-yellow-soft",
       textColor: "text-yellow-deep",
-      skills: ["Google BigQuery", "Looker Studio", "Recharts", "Matplotlib", "Plotly"]
+      skills: t({
+        id: ['Python', 'SQL (PostgreSQL)', 'Google BigQuery', 'Looker Studio', 'EDA', 'Data Pipelines', 'Big Data Analytics'],
+        en: ['Python', 'SQL (PostgreSQL)', 'Google BigQuery', 'Looker Studio', 'EDA', 'Data Pipelines', 'Big Data Analytics']
+      })
     },
     {
-      title: "AI Development Tools",
-      icon: "✨",
+      title: t({ id: 'Backend & API', en: 'Backend & API' }),
+      icon: "⚡",
       bgColor: "bg-yellow-soft",
       textColor: "text-yellow-deep",
-      skills: ["Claude Code", "ChatGPT", "DeepSeek Coder", "Gemini", "Prompt Engineering"]
+      skills: t({
+        id: ['Node.js', 'FastAPI', 'Pydantic', 'REST API Integration', 'Docker', 'Streamlit'],
+        en: ['Node.js', 'FastAPI', 'Pydantic', 'REST API Integration', 'Docker', 'Streamlit']
+      })
     },
     {
-      title: "Tools & Ecosystem",
+      title: t({ id: 'Frontend & UI', en: 'Frontend & UI' }),
+      icon: "◧",
+      bgColor: "bg-yellow-soft",
+      textColor: "text-yellow-deep",
+      skills: t({
+        id: ['React', 'Next.js', 'TypeScript', 'Tailwind CSS', 'Shadcn UI', 'Recharts', 'Framer Motion'],
+        en: ['React', 'Next.js', 'TypeScript', 'Tailwind CSS', 'Shadcn UI', 'Recharts', 'Framer Motion']
+      })
+    },
+    {
+      title: t({ id: 'Tools', en: 'Tools' }),
       icon: "⚙",
       bgColor: "bg-yellow-soft",
       textColor: "text-yellow-deep",
-      skills: ["Git/GitHub", "Docker", "Postman", "Figma", "Vercel", "Streamlit"]
+      skills: t({
+        id: ['Git/GitHub', 'Postman', 'Model Evaluation Metrics'],
+        en: ['Git/GitHub', 'Postman', 'Model Evaluation Metrics']
+      })
     }
   ];
 
@@ -57,10 +72,17 @@ const Skills = () => {
         <div className="mb-[44px] max-w-[600px] reveal">
           <span className="inline-flex items-center gap-2 font-mono text-[12px] tracking-[0.04em] text-blue bg-[rgba(166,24,46,0.08)] border border-blue-line py-[6px] px-[13px] rounded-full mb-[18px]">
             <span className="w-1.5 h-1.5 rounded-full bg-yellow shrink-0"></span>
-            Keahlian
+            {t({ id: 'Keahlian', en: 'Skills' })}
           </span>
-          <h2 className="text-[clamp(26px,3.2vw,34px)]">Skill</h2>
-          <p className="text-ink-soft mt-2.5 text-[15.5px]">Dari bahasa pemrograman inti sampai framework AI/ML dan tools kolaborasi yang mempercepat alur kerja.</p>
+          <h2 className="text-[clamp(26px,3.2vw,34px)]">
+            {t({ id: 'Skill', en: 'Skills' })}
+          </h2>
+          <p className="text-ink-soft mt-2.5 text-[15.5px]">
+            {t({ 
+              id: 'Tech stack dari AI/ML engineering sampai full-stack development.',
+              en: 'Tech stack from AI/ML engineering to full-stack development.'
+            })}
+          </p>
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
           {skillsCategories.map((category, index) => (

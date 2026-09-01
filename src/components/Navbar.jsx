@@ -1,22 +1,24 @@
 import { useState } from 'react';
 import { useLocation } from 'react-router-dom';
+import { useLanguage } from '../contexts/LanguageContext';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const location = useLocation();
   const isProjectsPage = location.pathname === '/projects';
+  const { language, toggleLanguage, t } = useLanguage();
 
   const navItems = [
-    { label: 'Tentang', id: 'about' },
-    { label: 'Keahlian', id: 'skills' },
-    { label: 'Pengalaman', id: 'experience' },
-    { label: 'Proyek', id: 'projects' },
-    { label: 'Pendidikan', id: 'more' }
+    { label: t({ id: 'Tentang', en: 'About' }), id: 'about' },
+    { label: t({ id: 'Keahlian', en: 'Skills' }), id: 'skills' },
+    { label: t({ id: 'Pengalaman', en: 'Experience' }), id: 'experience' },
+    { label: t({ id: 'Proyek', en: 'Projects' }), id: 'projects' },
+    { label: t({ id: 'Pendidikan', en: 'Education' }), id: 'more' }
   ];
 
   const mobileNavItems = [
     ...navItems,
-    { label: 'Kontak', id: 'contact' }
+    { label: t({ id: 'Kontak', en: 'Contact' }), id: 'contact' }
   ];
 
   const getLinkHref = (id) => {
@@ -42,12 +44,24 @@ const Navbar = () => {
             </li>
           ))}
         </ul>
-        <a 
-          href={isProjectsPage ? '/' : '#contact'} 
-          className="text-[13px] font-semibold py-[9px] px-[18px] rounded-full bg-ink text-white transition-all duration-200 hover:bg-blue hover:-translate-y-[1px] hidden md:inline-block"
-        >
-          Hubungi Saya
-        </a>
+        
+        <div className="hidden md:flex items-center gap-4">
+          {/* Language Switcher */}
+          <button
+            onClick={toggleLanguage}
+            className="text-[13px] font-semibold py-[7px] px-[14px] rounded-full bg-white-soft border border-border-custom text-ink transition-all duration-200 hover:border-blue hover:-translate-y-[1px]"
+            aria-label="Switch language"
+          >
+            {language === 'id' ? '🇬🇧 EN' : '🇮🇩 ID'}
+          </button>
+          
+          <a 
+            href={isProjectsPage ? '/' : '#contact'} 
+            className="text-[13px] font-semibold py-[9px] px-[18px] rounded-full bg-ink text-white transition-all duration-200 hover:bg-blue hover:-translate-y-[1px]"
+          >
+            {t({ id: 'Hubungi Saya', en: 'Contact Me' })}
+          </a>
+        </div>
         <button 
           className="md:hidden flex flex-col gap-1 bg-transparent border-none cursor-pointer p-1.5 focus-visible:outline-2 focus-visible:outline-blue focus-visible:outline-offset-4 focus-visible:rounded"
           onClick={() => setIsOpen(!isOpen)}
@@ -70,6 +84,16 @@ const Navbar = () => {
             {item.label}
           </a>
         ))}
+        {/* Mobile Language Switcher */}
+        <button
+          onClick={() => {
+            toggleLanguage();
+            setIsOpen(false);
+          }}
+          className="text-[15px] font-medium text-ink-soft text-left"
+        >
+          {language === 'id' ? '🇬🇧 English' : '🇮🇩 Bahasa Indonesia'}
+        </button>
       </div>
     </header>
   );
