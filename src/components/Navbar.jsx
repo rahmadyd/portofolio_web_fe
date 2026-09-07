@@ -107,9 +107,29 @@ const Navbar = () => {
             toggleLanguage();
             setIsOpen(false);
           }}
-          className="text-[20px] font-medium text-left py-1"
+          className="flex items-center gap-3 text-[15px] font-medium text-ink-soft py-1"
         >
-          {language === 'en' ? '🇮🇩 Bahasa Indonesia' : '🇬🇧 English'}
+          {language === 'en' ? (
+            <>
+              <svg width="24" height="18" viewBox="0 0 24 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect width="24" height="18" rx="2" fill="#F0F0F0"/>
+                <rect width="24" height="9" rx="2" fill="#DC1F26"/>
+                <rect y="9" width="24" height="9" fill="white"/>
+              </svg>
+              <span>Bahasa Indonesia</span>
+            </>
+          ) : (
+            <>
+              <svg width="24" height="18" viewBox="0 0 24 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect width="24" height="18" rx="2" fill="#012169"/>
+                <path d="M0 0L24 18M24 0L0 18" stroke="white" strokeWidth="3"/>
+                <path d="M0 0L24 18M24 0L0 18" stroke="#C8102E" strokeWidth="2"/>
+                <path d="M12 0V18M0 9H24" stroke="white" strokeWidth="5"/>
+                <path d="M12 0V18M0 9H24" stroke="#C8102E" strokeWidth="3"/>
+              </svg>
+              <span>English</span>
+            </>
+          )}
         </button>
       </div>
     </header>
