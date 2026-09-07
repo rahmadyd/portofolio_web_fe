@@ -29,7 +29,7 @@ const Hero = () => {
               {t({ id: 'Lihat Proyek', en: 'View Projects' })} →
             </a>
             <a 
-              href="https://drive.google.com/file/d/1R12vyXr_1g7Y6CKyUCyQy2RcabWNE5H0/view?usp=sharing" 
+              href="https://drive.google.com/file/d/1CPxnHxpTfvju57w369eGJA_v-x97r2B7/view?usp=sharing" 
               target="_blank"
               rel="noopener noreferrer"
               className="group py-[13px] px-6 rounded-[10px] font-semibold text-[14.5px] inline-flex items-center gap-2 transition-all duration-200 border-[1.5px] border-border-custom text-ink bg-white hover:border-yellow-deep hover:text-blue-deep hover:bg-yellow-soft hover:-translate-y-0.5 hover:shadow-[0_10px_20px_-10px_rgba(138,15,35,0.35)] relative overflow-hidden"
