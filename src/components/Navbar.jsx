@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { useLocation } from 'react-router-dom';
+import { useLocation, Link } from 'react-router-dom';
 import { useLanguage } from '../contexts/LanguageContext';
 
 const Navbar = () => {
@@ -23,7 +23,7 @@ const Navbar = () => {
 
   const getLinkHref = (id) => {
     if (isProjectsPage) {
-      return '/';
+      return `/#${id}`;
     }
     return `#${id}`;
   };
@@ -31,7 +31,7 @@ const Navbar = () => {
   return (
     <header className="fixed top-0 left-0 right-0 z-[100] bg-[rgba(253,253,251,0.82)] backdrop-blur-[10px] border-b border-border-custom">
       <div className="max-w-[1120px] mx-auto px-8 py-4 flex items-center justify-between">
-        <a href="/" className="font-heading font-bold text-lg flex items-center gap-2">Rahmad Hidayad</a>
+        <Link to="/" className="font-heading font-bold text-lg flex items-center gap-2">Rahmad Hidayad</Link>
         <ul className="hidden md:flex gap-8 list-none">
           {navItems.map((item) => (
             <li key={item.id}>
@@ -56,7 +56,7 @@ const Navbar = () => {
           </button>
           
           <a 
-            href={isProjectsPage ? '/' : '#contact'} 
+            href={isProjectsPage ? '/#contact' : '#contact'} 
             className="text-[13px] font-semibold py-[9px] px-[18px] rounded-full bg-ink text-white transition-all duration-200 hover:bg-blue hover:-translate-y-[1px]"
           >
             {t({ id: 'Hubungi Saya', en: 'Contact Me' })}
