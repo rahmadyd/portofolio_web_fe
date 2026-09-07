@@ -49,10 +49,11 @@ const Navbar = () => {
           {/* Language Switcher */}
           <button
             onClick={toggleLanguage}
-            className="text-[13px] font-semibold py-[7px] px-[14px] rounded-full bg-white-soft border border-border-custom text-ink transition-all duration-200 hover:border-blue hover:-translate-y-[1px]"
+            className="text-[20px] py-[7px] px-[12px] rounded-full bg-white-soft border border-border-custom transition-all duration-200 hover:border-blue hover:-translate-y-[1px]"
             aria-label="Switch language"
+            title={language === 'en' ? 'Switch to Indonesian' : 'Switch to English'}
           >
-            {language === 'id' ? '🇬🇧 EN' : '🇮🇩 ID'}
+            {language === 'en' ? '🇮🇩' : '🇬🇧'}
           </button>
           
           <a 
@@ -90,9 +91,9 @@ const Navbar = () => {
             toggleLanguage();
             setIsOpen(false);
           }}
-          className="text-[15px] font-medium text-ink-soft text-left"
+          className="text-[20px] font-medium text-left py-1"
         >
-          {language === 'id' ? '🇬🇧 English' : '🇮🇩 Bahasa Indonesia'}
+          {language === 'en' ? '🇮🇩 Bahasa Indonesia' : '🇬🇧 English'}
         </button>
       </div>
     </header>
