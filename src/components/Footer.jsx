@@ -1,13 +1,27 @@
+import { useLanguage } from '../contexts/LanguageContext';
+
 const Footer = () => {
+  const { t } = useLanguage();
+
   return (
     <section className="pt-[110px] pb-[60px] bg-blue-deep text-white border-t border-border-custom relative overflow-hidden contact-bg-circle" id="contact">
       <div className="relative text-center max-w-[620px] mx-auto px-6 sm:px-8">
         <span className="inline-flex items-center gap-2 justify-center font-mono text-[12px] text-yellow bg-[rgba(212,42,68,0.12)] border border-[rgba(212,42,68,0.35)] py-[6px] px-[13px] rounded-full mb-4">
           <span className="w-1.5 h-1.5 rounded-full bg-yellow shrink-0"></span>
-          Kontak
+          {t({ id: 'Kontak', en: 'Contact' })}
         </span>
-        <h2 className="text-white text-[clamp(28px,4vw,40px)] mb-4 leading-tight">Mari berkolaborasi di proyek berikutnya.</h2>
-        <p className="text-[#C9BFBF] text-[16px] mb-[40px]">Terbuka untuk peluang remote sebagai Frontend Developer. Isi form di bawah ini untuk mengirim pesan langsung.</p>
+        <h2 className="text-white text-[clamp(28px,4vw,40px)] mb-4 leading-tight">
+          {t({ 
+            id: 'Mari berkolaborasi di proyek berikutnya.', 
+            en: "Let's collaborate on the next project." 
+          })}
+        </h2>
+        <p className="text-[#C9BFBF] text-[16px] mb-[40px]">
+          {t({
+            id: 'Terbuka untuk peluang remote sebagai AI Engineer. Isi form di bawah ini untuk mengirim pesan langsung.',
+            en: 'Open for remote opportunities as an AI Engineer. Fill the form below to send a direct message.'
+          })}
+        </p>
         
         {/* Contact Form */}
         <form 
@@ -17,20 +31,50 @@ const Footer = () => {
         >
           <div className="flex flex-col sm:flex-row gap-5">
             <div className="flex-1">
-              <label htmlFor="name" className="block text-[13px] font-medium text-[#B0A5A5] mb-2 ml-1">Nama Lengkap</label>
-              <input type="text" id="name" name="name" placeholder="John Doe" required className="w-full bg-[rgba(255,255,255,0.03)] border border-[rgba(255,255,255,0.08)] rounded-[14px] px-4 py-3.5 text-white text-[14.5px] focus:outline-none focus:border-yellow focus:bg-[rgba(255,255,255,0.06)] transition-all placeholder:text-[rgba(255,255,255,0.2)]" />
+              <label htmlFor="name" className="block text-[13px] font-medium text-[#B0A5A5] mb-2 ml-1">
+                {t({ id: 'Nama Lengkap', en: 'Full Name' })}
+              </label>
+              <input 
+                type="text" 
+                id="name" 
+                name="name" 
+                placeholder={t({ id: 'John Doe', en: 'John Doe' })}
+                required 
+                className="w-full bg-[rgba(255,255,255,0.03)] border border-[rgba(255,255,255,0.08)] rounded-[14px] px-4 py-3.5 text-white text-[14.5px] focus:outline-none focus:border-yellow focus:bg-[rgba(255,255,255,0.06)] transition-all placeholder:text-[rgba(255,255,255,0.2)]" 
+              />
             </div>
             <div className="flex-1">
-              <label htmlFor="email" className="block text-[13px] font-medium text-[#B0A5A5] mb-2 ml-1">Alamat Email</label>
-              <input type="email" id="email" name="email" placeholder="john@example.com" required className="w-full bg-[rgba(255,255,255,0.03)] border border-[rgba(255,255,255,0.08)] rounded-[14px] px-4 py-3.5 text-white text-[14.5px] focus:outline-none focus:border-yellow focus:bg-[rgba(255,255,255,0.06)] transition-all placeholder:text-[rgba(255,255,255,0.2)]" />
+              <label htmlFor="email" className="block text-[13px] font-medium text-[#B0A5A5] mb-2 ml-1">
+                {t({ id: 'Alamat Email', en: 'Email Address' })}
+              </label>
+              <input 
+                type="email" 
+                id="email" 
+                name="email" 
+                placeholder="john@example.com"
+                required 
+                className="w-full bg-[rgba(255,255,255,0.03)] border border-[rgba(255,255,255,0.08)] rounded-[14px] px-4 py-3.5 text-white text-[14.5px] focus:outline-none focus:border-yellow focus:bg-[rgba(255,255,255,0.06)] transition-all placeholder:text-[rgba(255,255,255,0.2)]" 
+              />
             </div>
           </div>
           <div>
-            <label htmlFor="message" className="block text-[13px] font-medium text-[#B0A5A5] mb-2 ml-1">Pesan Anda</label>
-            <textarea id="message" name="message" rows="4" placeholder="Halo, saya tertarik untuk bekerja sama..." required className="w-full bg-[rgba(255,255,255,0.03)] border border-[rgba(255,255,255,0.08)] rounded-[14px] px-4 py-3.5 text-white text-[14.5px] focus:outline-none focus:border-yellow focus:bg-[rgba(255,255,255,0.06)] transition-all resize-none placeholder:text-[rgba(255,255,255,0.2)]"></textarea>
+            <label htmlFor="message" className="block text-[13px] font-medium text-[#B0A5A5] mb-2 ml-1">
+              {t({ id: 'Pesan Anda', en: 'Your Message' })}
+            </label>
+            <textarea 
+              id="message" 
+              name="message" 
+              rows="4" 
+              placeholder={t({ 
+                id: 'Halo, saya tertarik untuk bekerja sama...', 
+                en: 'Hello, I am interested in working together...' 
+              })}
+              required 
+              className="w-full bg-[rgba(255,255,255,0.03)] border border-[rgba(255,255,255,0.08)] rounded-[14px] px-4 py-3.5 text-white text-[14.5px] focus:outline-none focus:border-yellow focus:bg-[rgba(255,255,255,0.06)] transition-all resize-none placeholder:text-[rgba(255,255,255,0.2)]"
+            ></textarea>
           </div>
           <button type="submit" className="mt-1 w-full bg-yellow text-white py-[15px] px-6 rounded-[14px] font-semibold text-[15px] transition-all duration-300 hover:bg-[#E8425C] hover:shadow-[0_12px_24px_-10px_rgba(212,42,68,0.6)] hover:-translate-y-1 flex justify-center items-center gap-2 group">
-            Kirim Pesan Sekarang
+            {t({ id: 'Kirim Pesan Sekarang', en: 'Send Message Now' })}
             <svg className="transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
           </button>
         </form>
