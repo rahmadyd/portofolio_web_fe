@@ -49,11 +49,27 @@ const Navbar = () => {
           {/* Language Switcher */}
           <button
             onClick={toggleLanguage}
-            className="text-[20px] py-[7px] px-[12px] rounded-full bg-white-soft border border-border-custom transition-all duration-200 hover:border-blue hover:-translate-y-[1px]"
+            className="flex items-center justify-center py-[8px] px-[10px] rounded-full bg-white-soft border border-border-custom transition-all duration-200 hover:border-blue hover:-translate-y-[1px]"
             aria-label="Switch language"
             title={language === 'en' ? 'Switch to Indonesian' : 'Switch to English'}
           >
-            {language === 'en' ? '🇮🇩' : '🇬🇧'}
+            {language === 'en' ? (
+              // Indonesian Flag
+              <svg width="24" height="18" viewBox="0 0 24 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect width="24" height="18" rx="2" fill="#F0F0F0"/>
+                <rect width="24" height="9" rx="2" fill="#DC1F26"/>
+                <rect y="9" width="24" height="9" fill="white"/>
+              </svg>
+            ) : (
+              // UK Flag
+              <svg width="24" height="18" viewBox="0 0 24 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect width="24" height="18" rx="2" fill="#012169"/>
+                <path d="M0 0L24 18M24 0L0 18" stroke="white" strokeWidth="3"/>
+                <path d="M0 0L24 18M24 0L0 18" stroke="#C8102E" strokeWidth="2"/>
+                <path d="M12 0V18M0 9H24" stroke="white" strokeWidth="5"/>
+                <path d="M12 0V18M0 9H24" stroke="#C8102E" strokeWidth="3"/>
+              </svg>
+            )}
           </button>
           
           <a 
