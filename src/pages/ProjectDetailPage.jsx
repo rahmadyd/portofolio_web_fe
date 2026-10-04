@@ -139,7 +139,6 @@ const ProjectDetailPage = () => {
                     </div>
                   </div>
                 </div>
-                </div>
 
                 {/* Project Content */}
                 <div className="p-[28px]">
