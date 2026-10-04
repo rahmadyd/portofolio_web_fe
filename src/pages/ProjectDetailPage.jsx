@@ -1,7 +1,10 @@
 import { Link } from 'react-router-dom';
+import { useState } from 'react';
 import Navbar from '../components/Navbar';
 
 const ProjectDetailPage = () => {
+  const [selectedImage, setSelectedImage] = useState(null);
+
   const projects = [
     {
       id: 1,
@@ -114,13 +117,28 @@ const ProjectDetailPage = () => {
                 key={project.id}
                 className="group bg-white border border-border-custom rounded-[12px] overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:shadow-custom"
               >
-                {/* Project Image */}
-                <div className="relative w-full h-[280px] bg-gradient-to-br from-slate-200 to-slate-300 overflow-hidden">
+                {/* Project Image - Clickable */}
+                <div 
+                  className="relative w-full h-[280px] bg-gradient-to-br from-slate-200 to-slate-300 overflow-hidden cursor-pointer"
+                  onClick={() => setSelectedImage({ src: project.image, title: project.title })}
+                >
                   <img 
                     src={project.image} 
                     alt={project.title}
                     className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
                   />
+                  {/* Zoom Icon Overlay */}
+                  <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-all duration-300 flex items-center justify-center">
+                    <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-white/90 rounded-full p-3">
+                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                        <line x1="11" y1="8" x2="11" y2="14"></line>
+                        <line x1="8" y1="11" x2="14" y2="11"></line>
+                      </svg>
+                    </div>
+                  </div>
+                </div>
                 </div>
 
                 {/* Project Content */}
@@ -219,6 +237,48 @@ const ProjectDetailPage = () => {
           </div>
         </div>
       </section>
+
+      {/* Image Modal */}
+      {selectedImage && (
+        <div 
+          className="fixed inset-0 z-[200] flex items-center justify-center p-4 sm:p-8 animate-fadeIn"
+          onClick={() => setSelectedImage(null)}
+        >
+          {/* Glassmorphism Background */}
+          <div className="absolute inset-0 bg-black/40 backdrop-blur-md animate-fadeIn"></div>
+          
+          {/* Modal Content */}
+          <div 
+            className="relative max-w-5xl w-full bg-white rounded-[20px] shadow-2xl overflow-hidden animate-scaleIn"
+            onClick={(e) => e.stopPropagation()}
+          >
+            {/* Close Button */}
+            <button
+              onClick={() => setSelectedImage(null)}
+              className="absolute top-4 right-4 z-10 bg-white/90 hover:bg-white rounded-full p-2.5 transition-all duration-200 hover:scale-110 hover:rotate-90 shadow-lg group"
+              aria-label="Close"
+            >
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="text-ink-soft group-hover:text-blue">
+                <line x1="18" y1="6" x2="6" y2="18"></line>
+                <line x1="6" y1="6" x2="18" y2="18"></line>
+              </svg>
+            </button>
+
+            {/* Image */}
+            <img 
+              src={selectedImage.src} 
+              alt={selectedImage.title}
+              className="w-full h-auto max-h-[80vh] object-contain bg-gradient-to-br from-slate-100 to-slate-200"
+            />
+
+            {/* Title Bar */}
+            <div className="bg-gradient-to-t from-black/70 via-black/40 to-transparent absolute bottom-0 left-0 right-0 p-6 pt-12">
+              <h3 className="text-white text-lg font-semibold drop-shadow-lg">{selectedImage.title}</h3>
+              <p className="text-white/80 text-sm mt-1">Click anywhere to close</p>
+            </div>
+          </div>
+        </div>
+      )}
     </>
   );
 };
