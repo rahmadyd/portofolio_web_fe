@@ -1,15 +1,25 @@
 import { Link } from 'react-router-dom';
-import { useState } from 'react';
+import { useState, useMemo } from 'react';
 import Navbar from '../components/Navbar';
 import { useLanguage } from '../contexts/LanguageContext';
 
 const ProjectDetailPage = () => {
   const [selectedImage, setSelectedImage] = useState(null);
+  const [selectedCategory, setSelectedCategory] = useState('all');
   const { t } = useLanguage();
+
+  const categories = [
+    { value: 'all', label: t({ id: 'Semua Kategori', en: 'All Categories' }) },
+    { value: 'ai-llm', label: t({ id: 'AI & LLM / RAG Systems', en: 'AI & LLM / RAG Systems' }) },
+    { value: 'computer-vision', label: t({ id: 'Computer Vision & ML', en: 'Computer Vision & ML' }) },
+    { value: 'web-dev', label: t({ id: 'Web Development', en: 'Web Development' }) },
+    { value: 'data-analytics', label: t({ id: 'Data Analytics', en: 'Data Analytics' }) },
+  ];
 
   const projects = [
     {
       id: 1,
+      categoryKey: 'ai-llm',
       title: t({ 
         id: "InsightOps — Produk Analitik Log Telekomunikasi Milik Perusahaan", 
         en: "InsightOps — Company-Owned Telecom Log Analytics Product" 
@@ -35,6 +45,7 @@ const ProjectDetailPage = () => {
     },
     {
       id: 2,
+      categoryKey: 'ai-llm',
       title: t({ 
         id: "Chatbot RAG COVID-19 Berbahasa Indonesia", 
         en: "Indonesian-Language COVID-19 RAG Chatbot" 
@@ -60,6 +71,33 @@ const ProjectDetailPage = () => {
     },
     {
       id: 3,
+      categoryKey: 'ai-llm',
+      title: t({ 
+        id: "Proyek Implementasi LLM Qwen — Alibaba Cloud GenAI Hackathon", 
+        en: "Qwen LLM Implementation Project — Alibaba Cloud GenAI Hackathon" 
+      }),
+      category: "AI/LLM · Model Studio",
+      role: t({ id: "Peserta GenAI Learning Path", en: "GenAI Learning Path Participant" }),
+      duration: t({ id: "Feb 2025 – Mei 2025", en: "Feb 2025 – May 2025" }),
+      company: "Alibaba Cloud × GoTo Group (DTS)",
+      description: t({
+        id: "Membangun proyek implementasi LLM hands-on menggunakan model Qwen melalui Alibaba Cloud Model Studio API sebagai bagian dari Digital Talent Scholarship × Alibaba Cloud × GoTo Group program, mencakup prompt engineering, integrasi model API, dan penerapan konsep GenAI terapan.",
+        en: "Built a hands-on LLM implementation project using Qwen models through the Alibaba Cloud Model Studio API as part of the Digital Talent Scholarship × Alibaba Cloud × GoTo Group program, covering prompt engineering, model API integration, and applied GenAI concepts."
+      }),
+      technologies: ["Qwen Models", "Alibaba Cloud Model Studio", "Prompt Engineering", "Python", "GenAI"],
+      metrics: t({ 
+        id: "Hands-on LLM Implementation · Model Studio API", 
+        en: "Hands-on LLM Implementation · Model Studio API" 
+      }),
+      image: "/dummy-qwen-llm.svg",
+      links: {
+        github: null,
+        demo: null
+      }
+    },
+    {
+      id: 4,
+      categoryKey: 'computer-vision',
       title: t({ 
         id: "Sistem Pemantauan Lansia Real-Time — YOLOv7", 
         en: "Elderly Real-Time Monitoring System — Undergraduate Thesis — Computer Vision" 
@@ -84,7 +122,8 @@ const ProjectDetailPage = () => {
       }
     },
     {
-      id: 4,
+      id: 5,
+      categoryKey: 'computer-vision',
       title: t({ 
         id: "Mentoring Deteksi Kualitas Beras — YOLOv8 & SAHI", 
         en: "Rice-Quality Detection System Mentoring — YOLOv8 & SAHI" 
@@ -102,7 +141,59 @@ const ProjectDetailPage = () => {
         id: "Mentoring Tugas Akhir · Small Object Detection (SAHI)", 
         en: "Final-year mentoring · Small object detection (SAHI)" 
       }),
-      image: "/yolov7dashboard.jpeg",
+      image: "/dummy-rice-cv.svg",
+      links: {
+        github: null,
+        demo: null
+      }
+    },
+    {
+      id: 6,
+      categoryKey: 'web-dev',
+      title: t({
+        id: "Website Profil Perusahaan Quorvin",
+        en: "Quorvin Company Profile Website"
+      }),
+      category: "Web Development",
+      role: t({ id: "Frontend Developer", en: "Frontend Developer" }),
+      duration: t({ id: "Jan 2026 – Feb 2026", en: "Jan 2026 – Feb 2026" }),
+      company: "Quorvin",
+      description: t({
+        id: "Mengembangkan SPA profil perusahaan 4-halaman untuk firma konsultan AI menggunakan React 19 dan Vite dengan 11 komponen UI modular dan formulir kontak asinkron via Formspree.",
+        en: "Developed 4-page SPA company profile for AI consulting firm using React 19 and Vite with 11 modular UI components and async contact form via Formspree."
+      }),
+      technologies: ["React 19", "Vite", "React Router v7", "Tailwind CSS", "Formspree"],
+      metrics: t({
+        id: "11 komponen modular · Deployed on GitHub Pages",
+        en: "11 modular components · Deployed on GitHub Pages"
+      }),
+      image: "/quorvin.png",
+      links: {
+        website: "https://quorvin.biz.id/",
+        github: null
+      }
+    },
+    {
+      id: 7,
+      categoryKey: 'data-analytics',
+      title: t({
+        id: "Data Analyst Intern — Kimia Farma Dashboard",
+        en: "Data Analyst Intern — Kimia Farma Dashboard"
+      }),
+      category: "Data Analytics",
+      role: t({ id: "Data Analyst Intern", en: "Data Analyst Intern" }),
+      duration: t({ id: "Jan 2025 – Feb 2025", en: "Jan 2025 – Feb 2025" }),
+      company: "Rakamin Academy (Project-Based Internship)",
+      description: t({
+        id: "Membangun dashboard interaktif untuk stakeholder di Google BigQuery + Looker Studio melalui EDA dan optimasi query SQL untuk aksesibilitas data real-time pada dataset industri farmasi.",
+        en: "Built stakeholder-facing dashboards in Google BigQuery + Looker Studio through EDA and optimized SQL queries for real-time data accessibility on pharmaceutical dataset."
+      }),
+      technologies: ["Python", "SQL", "Google BigQuery", "Looker Studio", "Data Visualization"],
+      metrics: t({
+        id: "Real-time dashboard · Optimasi SQL queries",
+        en: "Real-time dashboard · Optimized SQL queries"
+      }),
+      image: "/Dashboardkimiafarma.png",
       links: {
         github: null,
         demo: null
@@ -110,13 +201,18 @@ const ProjectDetailPage = () => {
     }
   ];
 
+  const filteredProjects = useMemo(() => {
+    if (selectedCategory === 'all') return projects;
+    return projects.filter(p => p.categoryKey === selectedCategory);
+  }, [projects, selectedCategory]);
+
   return (
     <>
       <Navbar />
       <section className="pt-[120px] pb-[60px] bg-gradient-to-b from-hero-bg to-white min-h-screen">
         <div className="max-w-[1120px] mx-auto px-8">
           {/* Header */}
-          <div className="mb-[60px]">
+          <div className="mb-[40px]">
             <Link 
               to="/"
               className="inline-flex items-center gap-2 text-[14px] text-blue font-semibold mb-6 hover:text-blue-deep transition-colors"
@@ -134,110 +230,172 @@ const ProjectDetailPage = () => {
             </p>
           </div>
 
-          {/* Projects Grid */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-[32px]">
-            {projects.map((project) => (
-              <div
-                key={project.id}
-                className="group bg-white border border-border-custom rounded-[12px] overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:shadow-custom"
-              >
-                {/* Project Image - Clickable */}
-                <div 
-                  className="relative w-full h-[280px] bg-gradient-to-br from-slate-200 to-slate-300 overflow-hidden cursor-pointer"
-                  onClick={() => setSelectedImage({ src: project.image, title: project.title })}
+          {/* Filter Dropdown Bar */}
+          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-8 pb-6 border-b border-border-custom">
+            <div className="text-[14.5px] text-ink-soft">
+              {t({
+                id: `Menampilkan ${filteredProjects.length} proyek`,
+                en: `Showing ${filteredProjects.length} project${filteredProjects.length !== 1 ? 's' : ''}`
+              })}
+            </div>
+            
+            <div className="flex items-center gap-3">
+              <label htmlFor="category-filter" className="text-[13.5px] font-medium text-ink-soft shrink-0">
+                {t({ id: 'Kategori:', en: 'Category:' })}
+              </label>
+              <div className="relative min-w-[220px]">
+                <select
+                  id="category-filter"
+                  value={selectedCategory}
+                  onChange={(e) => setSelectedCategory(e.target.value)}
+                  className="w-full appearance-none bg-white border border-border-custom text-ink text-[14px] font-medium py-2.5 pl-4 pr-10 rounded-[10px] focus:outline-none focus:border-blue focus:ring-2 focus:ring-blue/20 cursor-pointer shadow-sm transition-all duration-200 hover:border-blue-line"
                 >
-                  <img 
-                    src={project.image} 
-                    alt={project.title}
-                    className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
-                  />
-                  {/* Zoom Icon Overlay */}
-                  <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-all duration-300 flex items-center justify-center">
-                    <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-white/90 rounded-full p-3">
-                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                        <circle cx="11" cy="11" r="8"></circle>
-                        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
-                        <line x1="11" y1="8" x2="11" y2="14"></line>
-                        <line x1="8" y1="11" x2="14" y2="11"></line>
-                      </svg>
+                  {categories.map((cat) => (
+                    <option key={cat.value} value={cat.value}>
+                      {cat.label}
+                    </option>
+                  ))}
+                </select>
+                <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-3.5 text-ink-faint">
+                  <svg className="w-4 h-4" viewBox="0 0 20 20" fill="currentColor">
+                    <path fillRule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clipRule="evenodd" />
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Projects Grid */}
+          {filteredProjects.length === 0 ? (
+            <div className="text-center py-16 bg-white border border-border-custom rounded-[12px] p-8">
+              <p className="text-ink-soft text-base mb-3">
+                {t({
+                  id: 'Tidak ada proyek yang sesuai dengan kategori ini.',
+                  en: 'No projects match this category.'
+                })}
+              </p>
+              <button
+                onClick={() => setSelectedCategory('all')}
+                className="text-[13.5px] font-semibold text-blue hover:underline"
+              >
+                {t({ id: 'Lihat Semua Kategori', en: 'View All Categories' })}
+              </button>
+            </div>
+          ) : (
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-[32px]">
+              {filteredProjects.map((project) => (
+                <div
+                  key={project.id}
+                  className="group bg-white border border-border-custom rounded-[12px] overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:shadow-custom flex flex-col"
+                >
+                  {/* Project Image - Clickable */}
+                  <div 
+                    className="relative w-full h-[280px] bg-gradient-to-br from-slate-200 to-slate-300 overflow-hidden cursor-pointer"
+                    onClick={() => setSelectedImage({ src: project.image, title: project.title })}
+                  >
+                    <img 
+                      src={project.image} 
+                      alt={project.title}
+                      className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                    />
+                    {/* Zoom Icon Overlay */}
+                    <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-all duration-300 flex items-center justify-center">
+                      <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-white/90 rounded-full p-3 shadow-md">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                          <circle cx="11" cy="11" r="8"></circle>
+                          <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                          <line x1="11" y1="8" x2="11" y2="14"></line>
+                          <line x1="8" y1="11" x2="14" y2="11"></line>
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Project Content */}
+                  <div className="p-[28px] flex flex-col flex-1">
+                    {/* Category Badge */}
+                    <span className="inline-flex items-center self-start font-mono text-[11px] py-1 px-2.5 rounded-md bg-[rgba(166,24,46,0.08)] text-blue border border-blue-line mb-3">
+                      {project.category}
+                    </span>
+
+                    {/* Title */}
+                    <h3 className="text-[18px] font-semibold leading-[1.3] mb-2 text-ink group-hover:text-blue transition-colors">
+                      {project.title}
+                    </h3>
+
+                    {/* Role & Duration */}
+                    <div className="text-[13px] text-ink-soft mb-1">
+                      <span className="font-medium">{project.role}</span> · {project.company}
+                    </div>
+                    <div className="text-[12px] text-ink-faint font-mono mb-3">
+                      {project.duration}
+                    </div>
+
+                    {/* Description */}
+                    <p className="text-[14.5px] text-ink-soft mb-4 line-clamp-3 leading-relaxed flex-1">
+                      {project.description}
+                    </p>
+
+                    {/* Technologies */}
+                    <div className="flex flex-wrap gap-2 mb-4">
+                      {project.technologies.slice(0, 4).map((tech, idx) => (
+                        <span 
+                          key={idx}
+                          className="text-[11.5px] px-2.5 py-1 rounded-full bg-blue-soft text-blue font-medium"
+                        >
+                          {tech}
+                        </span>
+                      ))}
+                      {project.technologies.length > 4 && (
+                        <span className="text-[11.5px] px-2.5 py-1 rounded-full bg-slate-100 text-ink-faint font-medium">
+                          +{project.technologies.length - 4}
+                        </span>
+                      )}
+                    </div>
+
+                    {/* Metrics */}
+                    <div className="text-[12.5px] text-ink-faint mb-4 font-mono">
+                      📊 {project.metrics}
+                    </div>
+
+                    {/* Links */}
+                    <div className="flex gap-2 pt-4 border-t border-border-custom mt-auto">
+                      {project.links.demo && (
+                        <a 
+                          href={project.links.demo}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="flex-1 text-center py-2.5 px-3 text-[13px] font-semibold rounded-[8px] bg-blue text-white transition-all duration-200 hover:bg-blue-deep hover:shadow-md"
+                        >
+                          {t({ id: 'Lihat Demo', en: 'View Demo' })}
+                        </a>
+                      )}
+                      {project.links.website && (
+                        <a 
+                          href={project.links.website}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="flex-1 text-center py-2.5 px-3 text-[13px] font-semibold rounded-[8px] bg-blue text-white transition-all duration-200 hover:bg-blue-deep hover:shadow-md"
+                        >
+                          {t({ id: 'Kunjungi Website', en: 'Visit Website' })}
+                        </a>
+                      )}
+                      {project.links.github && (
+                        <a 
+                          href={project.links.github}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="flex-1 text-center py-2.5 px-3 text-[13px] font-semibold rounded-[8px] bg-white border border-border-custom text-ink transition-all duration-200 hover:border-blue hover:text-blue hover:bg-blue-soft"
+                        >
+                          GitHub
+                        </a>
+                      )}
                     </div>
                   </div>
                 </div>
-
-                {/* Project Content */}
-                <div className="p-[28px]">
-                  {/* Category Badge */}
-                  <span className="inline-flex items-center font-mono text-[11px] py-1 px-2.5 rounded-md bg-[rgba(166,24,46,0.08)] text-blue border border-blue-line mb-3">
-                    {project.category}
-                  </span>
-
-                  {/* Title */}
-                  <h3 className="text-[18px] font-semibold leading-[1.3] mb-2 text-ink group-hover:text-blue transition-colors">
-                    {project.title}
-                  </h3>
-
-                  {/* Role & Duration */}
-                  <div className="text-[13px] text-ink-soft mb-1">
-                    <span className="font-medium">{project.role}</span> · {project.company}
-                  </div>
-                  <div className="text-[12px] text-ink-faint font-mono mb-3">
-                    {project.duration}
-                  </div>
-
-                  {/* Description */}
-                  <p className="text-[14.5px] text-ink-soft mb-4 line-clamp-3 leading-relaxed">
-                    {project.description}
-                  </p>
-
-                  {/* Technologies */}
-                  <div className="flex flex-wrap gap-2 mb-4">
-                    {project.technologies.slice(0, 4).map((tech, idx) => (
-                      <span 
-                        key={idx}
-                        className="text-[11.5px] px-2.5 py-1 rounded-full bg-blue-soft text-blue font-medium"
-                      >
-                        {tech}
-                      </span>
-                    ))}
-                    {project.technologies.length > 4 && (
-                      <span className="text-[11.5px] px-2.5 py-1 rounded-full bg-slate-100 text-ink-faint font-medium">
-                        +{project.technologies.length - 4}
-                      </span>
-                    )}
-                  </div>
-
-                  {/* Metrics */}
-                  <div className="text-[12.5px] text-ink-faint mb-4 font-mono">
-                    📊 {project.metrics}
-                  </div>
-
-                  {/* Links */}
-                  <div className="flex gap-2 pt-4 border-t border-border-custom">
-                    {project.links.demo && (
-                      <a 
-                        href={project.links.demo}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="flex-1 text-center py-2.5 px-3 text-[13px] font-semibold rounded-[8px] bg-blue text-white transition-all duration-200 hover:bg-blue-deep hover:shadow-md"
-                      >
-                        {t({ id: 'Lihat Demo', en: 'View Demo' })}
-                      </a>
-                    )}
-                    {project.links.github && (
-                      <a 
-                        href={project.links.github}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="flex-1 text-center py-2.5 px-3 text-[13px] font-semibold rounded-[8px] bg-white border border-border-custom text-ink transition-all duration-200 hover:border-blue hover:text-blue hover:bg-blue-soft"
-                      >
-                        GitHub
-                      </a>
-                    )}
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
+              ))}
+            </div>
+          )}
         </div>
       </section>
 
