@@ -6,115 +6,82 @@ const Experience = () => {
   const experiences = [
     {
       company: 'Quorvin',
-      role: t({ id: 'AI Engineer', en: 'AI Engineer' }),
-      location: 'Remote',
-      period: t({ id: 'Nov 2025 – Sekarang', en: 'Nov 2025 – Present' }),
+      role: t({ id: 'AI Engineer (Freelance)', en: 'AI Engineer (Freelance)' }),
+      location: t({ id: 'Jarak Jauh', en: 'Remote' }),
+      period: 'Nov 2025 – Okt 2026',
       projects: [
         {
           title: t({ 
-            id: 'InsightOps — Platform Analisis Log Telekomunikasi Berbasis AI', 
-            en: 'InsightOps — AI-Powered Telecom Log Analytics Platform' 
+            id: 'InsightOps — Produk Analitik Log Telekomunikasi Milik Perusahaan', 
+            en: 'InsightOps — Proprietary Telecom Log Analytics Product' 
           }),
-          tech: 'FastAPI · Groq · gpt-oss-120b · Next.js · TypeScript · Shadcn UI · Recharts',
+          tech: 'FastAPI · Groq · gpt-oss-120b · Python · Pydantic · Railway · Next.js',
           achievements: t({
             id: [
-              'Merancang dan membangun layanan AI root-cause-analysis (FastAPI + Groq, gpt-oss-120b) yang mengubah log telco multi-sistem mentah menjadi output JSON terstruktur — root cause, summary, dan rekomendasi yang diprioritaskan untuk dashboard operator.',
-              'Mengurangi risiko halusinasi dengan engineering strict prompt constraints (melarang kode error yang diciptakan, membatasi model hanya pada field yang ada di log) dan menjalankan inference pada temperature=0 untuk output yang deterministik dan auditable.',
-              'Memodelkan logika domain telco di 3 kategori complaint dan 8 backend system (CHN, ESB, PAY, DOM, PGW, IGW, RLS, SGW), mapping setiap tipe complaint ke multi-hop log flow-nya untuk memandu deteksi root-cause.',
-              'Mendesain abstraksi log-data-source yang pluggable (Python ABC) yang memisahkan AI analyzer dari storage layer, memungkinkan migrasi dari local JSON ke production log platform tanpa menyentuh business logic.',
-              'Membangun 8 REST API endpoint (FastAPI, Pydantic) untuk log retrieval, AI analysis, ticket CRUD, dan dashboard statistics, kemudian mengkonsumsinya di 5-halaman Next.js dashboard dengan 17+ reusable UI component (Shadcn UI, Recharts, Framer Motion).'
+              'Membangun layanan proof-of-concept analisis akar masalah berbasis AI (FastAPI + Groq, gpt-oss-120b) yang mengubah log telekomunikasi lintas sistem menjadi JSON terstruktur berisi potensi akar masalah, ringkasan, dan rekomendasi yang diprioritaskan.',
+              'Memodelkan logika analisis akar masalah untuk 3 kategori keluhan pada 8 sistem backend, dengan menyisipkan alur log multi-hop tiap kategori ke dalam prompt dan hanya mengirim log yang gagal, serta batasan prompt untuk meminimalkan keluaran tanpa dasar.',
+              'Membangun 8 endpoint REST API (FastAPI, Pydantic) untuk pengambilan log, analisis AI, CRUD tiket, dan statistik dashboard, serta merancang abstraksi LogDataSource berbasis Python ABC (JSON lokal sudah diimplementasikan; Splunk direncanakan).',
+              'Men-deploy backend di Railway (data sampel yang dianonimkan) sebagai proof of concept dan mengintegrasikannya ke dashboard Next.js 5 halaman milik InsightOps, produk yang ditujukan bagi calon klien.'
             ],
             en: [
-              'Designed and built an AI root-cause-analysis service (FastAPI + Groq, gpt-oss-120b) that turns raw multi-system telco logs into structured JSON output — root cause, summary, and prioritized recommendations for operator dashboards.',
-              'Reduced hallucination risk by engineering strict prompt constraints (forbidding invented error codes, restricting the model to fields present in the logs) and running inference at temperature=0 for deterministic, auditable output.',
-              'Modeled telco domain logic across 3 complaint categories and 8 backend systems (CHN, ESB, PAY, DOM, PGW, IGW, RLS, SGW), mapping each complaint type to its multi-hop log flow to guide root-cause detection.',
-              'Designed a pluggable log-data-source abstraction (Python ABC) that decouples the AI analyzer from the storage layer, enabling a planned migration from local JSON to a production log platform without touching business logic.',
-              'Built 8 REST API endpoints (FastAPI, Pydantic) for log retrieval, AI analysis, ticket CRUD, and dashboard statistics, then consumed them in a 5-page Next.js dashboard with 17+ reusable UI components (Shadcn UI, Recharts, Framer Motion).'
+              'Built an AI-powered root-cause analysis proof-of-concept service (FastAPI + Groq, gpt-oss-120b) converting multi-system telecom logs into structured JSON with potential root causes, summaries, and prioritized recommendations.',
+              'Modeled root-cause analysis logic for 3 complaint categories across 8 backend systems, inserting multi-hop log flows into prompts while sending only failed logs, with strict prompt constraints to minimize ungrounded outputs.',
+              'Engineered 8 REST API endpoints (FastAPI, Pydantic) for log retrieval, AI analysis, ticket CRUD, and dashboard statistics, designing a Python ABC-based LogDataSource abstraction (local JSON implemented; Splunk planned).',
+              'Deployed backend on Railway (anonymized sample data) as a proof of concept and integrated it into the InsightOps 5-page Next.js dashboard intended for prospective clients.'
             ]
           })
         }
       ]
     },
     {
-      company: 'ProcodeCG',
-      role: t({ id: 'AI Engineer (Internship Project)', en: 'AI Engineer (Internship Project)' }),
+      company: 'ProCodeCG',
+      role: t({ id: 'AI Engineer (Proyek Magang)', en: 'AI Engineer (Internship Project)' }),
       location: '',
-      period: t({ id: 'Agu 2025 – Nov 2025', en: 'Aug 2025 – Nov 2025' }),
+      period: 'Agu 2025 – Nov 2025',
       projects: [
         {
           title: t({ 
-            id: 'Chatbot COVID-19 Berbasis RAG & LLM Lokal', 
-            en: 'COVID-19 RAG Chatbot with Local LLM' 
+            id: 'Chatbot RAG COVID-19 Berbahasa Indonesia', 
+            en: 'Indonesian COVID-19 RAG Chatbot' 
           }),
-          tech: 'LangChain · FAISS · Sentence Transformers · Ollama · Mistral 7B · Streamlit · Python',
+          tech: 'LangChain · FAISS · Sentence Transformers (multilingual MPNet) · Mistral 7B · Ollama · Streamlit · Python',
           achievements: t({
             id: [
-              'Memotong latency semantic search ke <0.5 detik dengan membangun pipeline chatbot RAG (LangChain, FAISS, Sentence Transformers) untuk asisten COVID-19 bilingual bahasa Indonesia.',
-              'Menghilangkan silent failure saat error/timeout dengan mendesain mekanisme fallback 4-tier yang menjamin respons di setiap skenario, dan menjaga bot tetap on-domain dengan sistem guardrail input/output dua lapis.',
-              'Mengurangi halusinasi dan meningkatkan akurasi faktual dengan mengintegrasikan local LLM (Mistral 7B-Instruct via Ollama) dengan context throttling.',
-              'Mencapai skor kualitas 8.5/10 di 18 metrik evaluasi dengan waktu respons end-to-end <10 detik; mengirimkan interface Streamlit dengan multi-room chat, history persistence, dan retrieval debugging.'
+              'Membangun chatbot RAG COVID-19 berbahasa Indonesia menggunakan LangChain, FAISS, dan Sentence Transformers (multilingual MPNet), dengan model Mistral 7B-Instruct lokal yang dijalankan melalui Ollama.',
+              'Merancang fallback 4 tingkat (jawaban preset untuk pertanyaan dasar, jawaban berbasis templat, generasi LLM, fallback akhir) dengan timeout, ditambah filter input berbasis kata kunci dan pemeriksaan keamanan keluaran agar bot tetap sesuai topik.',
+              'Dievaluasi dengan 18 kasus uji yang dirancang manual (16 lolos penuh, 1 lolos sebagian, 1 gagal); latensi retrieval di bawah 0,5 detik dan waktu respons end-to-end di bawah 10 detik.',
+              'Membangun antarmuka Streamlit dengan chat multi-ruang, penyimpanan riwayat, dan halaman debug retrieval.'
             ],
             en: [
-              'Cut semantic search latency to under 0.5s by building a RAG chatbot pipeline (LangChain, FAISS, Sentence Transformers) for a bilingual Indonesian-language COVID-19 assistant.',
-              'Eliminated silent failures during errors/timeouts by designing a 4-tier fallback mechanism guaranteeing a response in every scenario, and kept the bot on-domain with a two-layer input/output guardrail system.',
-              'Reduced hallucination and improved factual accuracy by integrating a local LLM (Mistral 7B-Instruct via Ollama) with context throttling.',
-              'Achieved an 8.5/10 quality score across 18 evaluation metrics with <10s end-to-end response time; shipped a Streamlit interface with multi-room chat, history persistence, and retrieval debugging.'
+              'Built an Indonesian COVID-19 RAG chatbot using LangChain, FAISS, and Sentence Transformers (multilingual MPNet), powered by a local Mistral 7B-Instruct model running via Ollama.',
+              'Engineered a 4-tier fallback mechanism (preset answers for basic questions, template-based responses, LLM generation, final fallback) with timeouts, input keyword filters, and output safety checks to keep the bot strictly on-topic.',
+              'Evaluated against 18 manually designed test cases (16 full pass, 1 partial, 1 fail); achieved retrieval latency under 0.5s and end-to-end response time under 10s.',
+              'Developed a Streamlit interface featuring multi-room chat, chat history persistence, and a retrieval debugging page.'
             ]
           })
         }
       ]
     },
     {
-      company: t({ 
-        id: 'Alibaba Cloud Indonesia GenAI Hackathon 2025, with GoTo Group',
-        en: 'Alibaba Cloud Indonesia GenAI Hackathon 2025, with GoTo Group'
-      }),
-      role: t({ id: 'AI Engineer Apprentice', en: 'AI Engineer Apprentice' }),
-      location: '',
-      period: t({ id: 'Feb 2025 – Mei 2025', en: 'Feb 2025 – May 2025' }),
+      company: t({ id: 'Freelance', en: 'Freelance' }),
+      role: t({ id: 'Mentor AI', en: 'AI Mentor' }),
+      location: t({ id: 'Jarak Jauh', en: 'Remote' }),
+      period: 'Jan 2024 – Des 2024',
       projects: [
         {
           title: t({ 
-            id: 'Program GenAI Learning Path', 
-            en: 'GenAI Learning Path Program' 
+            id: 'Mentoring Computer Vision — Deteksi Kualitas Beras', 
+            en: 'Computer Vision Mentoring — Rice Quality Detection' 
           }),
-          tech: 'Alibaba Cloud Model Studio · Qwen Models · GenAI Fundamentals',
+          tech: 'YOLOv8 · SAHI · Roboflow · PyTorch · Computer Vision',
           achievements: t({
             id: [
-              'Menyelesaikan learning path GenAI intensif 3 bulan (Digital Talent Scholarship × Alibaba Cloud × GoTo Group) yang mencakup fundamental AI, etika, dan modul GenAI terapan.',
-              'Membangun proyek implementasi LLM hands-on menggunakan Alibaba Cloud Model Studio API dengan Qwen models.'
+              'Membimbing mahasiswa tingkat akhir dalam mengembangkan sistem deteksi kualitas beras menggunakan YOLOv8 dan SAHI.',
+              'Memandu alur anotasi dan augmentasi dataset menggunakan Roboflow.'
             ],
             en: [
-              'Completed a 3-month intensive GenAI learning path (Digital Talent Scholarship × Alibaba Cloud × GoTo Group) covering AI fundamentals, ethics, and applied GenAI modules.',
-              'Built a hands-on LLM implementation project using the Alibaba Cloud Model Studio API with Qwen models.'
-            ]
-          })
-        }
-      ]
-    },
-    {
-      company: t({ 
-        id: 'Startup Campus (MSIB Batch 3, Kampus Merdeka)',
-        en: 'Startup Campus (MSIB Batch 3, Kampus Merdeka)'
-      }),
-      role: t({ id: 'AI Engineer Apprentice', en: 'AI Engineer Apprentice' }),
-      location: '',
-      period: t({ id: '2022 (~6 bulan)', en: '2022 (~6 months)' }),
-      projects: [
-        {
-          title: t({ 
-            id: 'Program Magang AI Bersertifikat Pemerintah', 
-            en: 'Government-Certified AI Apprenticeship' 
-          }),
-          tech: 'Machine Learning · Deep Learning · Applied AI',
-          achievements: t({
-            id: [
-              'Menyelesaikan magang AI bersertifikat pemerintah (program MSIB Kemendikbud) yang mencakup kurikulum terstruktur dalam machine learning, deep learning, dan applied AI.',
-              'Meraih peringkat 3 dalam Kompetisi AI Startup Campus (2022).'
-            ],
-            en: [
-              'Completed a government-sponsored AI apprenticeship (Kemendikbud MSIB program) covering a structured curriculum in machine learning, deep learning, and applied AI.',
-              'Placed 3rd in the Startup Campus AI Competition (2022).'
+              'Mentored final-year university students in developing a rice quality detection system using YOLOv8 and SAHI.',
+              'Guided dataset annotation and augmentation workflows using Roboflow.'
             ]
           })
         }

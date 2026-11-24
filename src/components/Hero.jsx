@@ -15,12 +15,12 @@ const Hero = () => {
           </span>
           <h1 className="text-[clamp(36px,5vw,56px)] leading-[1.05] mb-5">
             Rahmad Hidayad,<br />
-            <span className="text-blue">{t({ id: 'AI Engineer', en: 'AI Engineer' })}</span> | {t({ id: 'LLM/RAG Systems & Computer Vision', en: 'LLM/RAG Systems & Computer Vision' })}
+            <span className="text-blue">{t({ id: 'AI Engineer', en: 'AI Engineer' })}</span> | {t({ id: 'Computer Vision & Sistem LLM/RAG', en: 'Computer Vision & LLM/RAG Systems' })}
           </h1>
-          <p className="text-[17px] text-ink-soft max-w-[520px] mb-[30px]">
+          <p className="text-[17px] text-ink-soft max-w-[540px] mb-[30px] leading-relaxed">
             {t({ 
-              id: 'AI Engineer dengan pengalaman end-to-end mengirimkan sistem LLM/RAG dan computer vision production-grade — dari pengembangan model dan evaluasi hingga deployment. Fokus pada sistem AI yang reliable, measurable, dan production-ready.',
-              en: 'AI Engineer with hands-on, end-to-end experience shipping production-grade LLM/RAG and computer vision systems — from model development and evaluation to deployment. Focused on reliable, measurable, production-ready AI systems.'
+              id: 'AI Engineer dengan pengalaman langsung membangun sistem LLM/RAG, mulai dari perancangan prompt dan evaluasi hingga deployment. Membangun backend proof-of-concept analisis akar masalah (root-cause analysis) untuk log telekomunikasi (FastAPI + Groq) dan chatbot RAG berbahasa Indonesia (LangChain, FAISS, Mistral 7B via Ollama), serta pengalaman computer vision (skripsi YOLOv7, mentoring YOLOv8). Berfokus pada aplikasi LLM yang andal dengan Python.',
+              en: 'AI Engineer with hands-on experience building LLM/RAG systems from prompt engineering and evaluation to deployment. Built a root-cause analysis proof-of-concept backend for telecom logs (FastAPI + Groq) and an Indonesian RAG chatbot (LangChain, FAISS, Mistral 7B via Ollama), alongside computer vision experience (YOLOv7 thesis, YOLOv8 mentoring). Focused on reliable LLM applications with Python.'
             })}
           </p>
           <div className="flex gap-[14px] flex-wrap mb-[36px]">
@@ -43,6 +43,13 @@ const Hero = () => {
             </a>
           </div>
           <div className="flex gap-[10px] flex-wrap">
+            <span className="text-[13.5px] font-medium text-ink-soft flex items-center gap-[7px] py-[9px] px-[14px] rounded-[9px] bg-white border border-border-custom">
+              <svg viewBox="0 0 24 24" fill="none" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-[15px] h-[15px] stroke-ink-faint shrink-0">
+                <path d="M12 2a8 8 0 0 0-8 8c0 5.25 8 12 8 12s8-6.75 8-12a8 8 0 0 0-8-8z" />
+                <circle cx="12" cy="10" r="3" />
+              </svg>
+              Bengkulu, Indonesia
+            </span>
             <a 
               href="mailto:rahmad.hidayad.work@gmail.com"
               className="group text-[13.5px] font-medium text-ink-soft flex items-center gap-[7px] py-[9px] px-[14px] rounded-[9px] bg-white border border-border-custom transition-all duration-200 hover:text-blue hover:border-blue-line hover:bg-white-soft hover:-translate-y-0.5"
@@ -52,6 +59,28 @@ const Hero = () => {
                 <path d="M3.5 7l8.5 6 8.5-6" />
               </svg>
               rahmad.hidayad.work@gmail.com
+            </a>
+            <a 
+              href="tel:+6285777145179"
+              className="group text-[13.5px] font-medium text-ink-soft flex items-center gap-[7px] py-[9px] px-[14px] rounded-[9px] bg-white border border-border-custom transition-all duration-200 hover:text-blue hover:border-blue-line hover:bg-white-soft hover:-translate-y-0.5"
+            >
+              <svg viewBox="0 0 24 24" fill="none" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-[15px] h-[15px] stroke-ink-faint shrink-0 transition-stroke duration-200 group-hover:stroke-blue">
+                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
+              </svg>
+              +62-857-7714-5179
+            </a>
+            <a 
+              href="https://rahmadyd.my.id" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="group text-[13.5px] font-medium text-ink-soft flex items-center gap-[7px] py-[9px] px-[14px] rounded-[9px] bg-white border border-border-custom transition-all duration-200 hover:text-blue hover:border-blue-line hover:bg-white-soft hover:-translate-y-0.5"
+            >
+              <svg viewBox="0 0 24 24" fill="none" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-[15px] h-[15px] stroke-ink-faint shrink-0 transition-stroke duration-200 group-hover:stroke-blue">
+                <circle cx="12" cy="12" r="10" />
+                <line x1="2" y1="12" x2="22" y2="12" />
+                <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
+              </svg>
+              rahmadyd.my.id
             </a>
             <a 
               href="https://github.com/rahmadyd" 

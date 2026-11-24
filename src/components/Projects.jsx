@@ -5,43 +5,65 @@ const Projects = () => {
 
   const projects = [
     {
-      category: t({ id: 'Tugas Akhir · Computer Vision', en: 'Capstone Project · Computer Vision' }),
+      category: t({ id: 'Skripsi · Computer Vision', en: 'Thesis · Computer Vision' }),
       title: t({ 
-        id: 'Sistem Monitoring Lansia Real-Time', 
+        id: 'Sistem Pemantauan Lansia Real-Time', 
         en: 'Elderly Real-Time Monitoring System' 
       }),
       date: '2022 – 2023',
-      tech: 'YOLOv7 · PyTorch · Computer Vision · Real-Time Detection',
+      tech: 'YOLOv7 · PyTorch · Roboflow · Confusion Matrix · Webcam Real-Time',
       points: t({
         id: [
-          'Mencapai akurasi deteksi 94% dengan melatih dan mengoptimalkan model YOLOv7 (PyTorch) melalui systematic A/B testing di berbagai arsitektur, hyperparameter, dan strategi augmentasi.',
-          'Memungkinkan inferensi real-time low-latency pada input webcam live dengan menerapkan optimasi edge-computing untuk deteksi keberadaan dan aktivitas lansia.'
+          'Mengembangkan sistem deteksi lansia vs. non-lansia secara real-time menggunakan YOLOv7 dan PyTorch, dilatih pada dataset 1.200 gambar yang dianotasi dan diaugmentasi dengan Roboflow.',
+          'Mengevaluasi prediksi lansia vs. non-lansia dengan confusion matrix, mencapai akurasi 94%, presisi 100%, recall 89%, dan F1-score 94% pada set validasi.',
+          'Diuji langsung melalui webcam; deteksi stabil pada jarak 4–6 m, pencahayaan 24–65 lux, dan sudut 0°–30°.'
         ],
         en: [
-          'Reached 94% detection accuracy by training and optimizing a YOLOv7 (PyTorch) model through systematic A/B testing across architectures, hyperparameters, and augmentation strategies.',
-          'Enabled low-latency real-time inference on live webcam input by applying edge-computing optimization for elderly presence and activity detection.'
+          'Developed a real-time elderly vs. non-elderly detection system using YOLOv7 and PyTorch, trained on a dataset of 1,200 images annotated and augmented with Roboflow.',
+          'Evaluated predictions using a confusion matrix, achieving 94% accuracy, 100% precision, 89% recall, and 94% F1-score on the validation set.',
+          'Tested live via webcam; detection was stable at 4–6 m distance, 24–65 lux illumination, and 0°–30° angles.'
         ]
       })
     },
     {
-      category: t({ 
-        id: 'Project-Based Internship · Data Analytics', 
-        en: 'Project-Based Internship · Data Analytics' 
-      }),
+      category: t({ id: 'Produk Perusahaan · AI & LLM', en: 'Company Product · AI & LLM' }),
       title: t({ 
-        id: 'Data Analyst Intern — Rakamin Academy, Dataset Kimia Farma', 
-        en: 'Data Analyst Intern — Rakamin Academy, Kimia Farma dataset' 
+        id: 'InsightOps — Produk Analitik Log Telekomunikasi', 
+        en: 'InsightOps — Telecom Log Analytics Product' 
       }),
-      date: t({ id: 'Jan 2025 – Feb 2025', en: 'Jan 2025 – Feb 2025' }),
-      tech: 'Python · SQL · Google BigQuery · Looker Studio · EDA · Data Visualization',
+      date: 'Nov 2025 – Okt 2026',
+      tech: 'FastAPI · Groq · gpt-oss-120b · Python · Pydantic · Railway · Next.js',
       points: t({
         id: [
-          'Mengungkap insight bisnis kunci untuk pengambilan keputusan stakeholder melalui EDA (analisis statistik, profiling data, eksplorasi visual) pada dataset industri terstruktur.',
-          'Membangun dashboard untuk stakeholder di Google BigQuery + Looker Studio, mengoptimalkan query SQL untuk aksesibilitas data real-time.'
+          'Membangun layanan proof-of-concept analisis akar masalah berbasis AI (FastAPI + Groq, gpt-oss-120b) yang mengubah log telekomunikasi lintas sistem menjadi JSON terstruktur berisi potensi akar masalah, ringkasan, dan rekomendasi yang diprioritaskan.',
+          'Memodelkan logika analisis akar masalah untuk 3 kategori keluhan pada 8 sistem backend, dengan menyisipkan alur log multi-hop ke prompt dan batasan prompt untuk meminimalkan keluaran tanpa dasar.',
+          'Membangun 8 endpoint REST API (FastAPI, Pydantic) serta merancang abstraksi LogDataSource Python ABC, di-deploy di Railway dan diintegrasikan ke dashboard Next.js 5 halaman.'
         ],
         en: [
-          'Surfaced key business insights for stakeholder decision-making through EDA (statistical analysis, data profiling, visual exploration) on a structured industry dataset.',
-          'Built stakeholder-facing dashboards in Google BigQuery + Looker Studio, optimizing SQL queries for real-time data accessibility.'
+          'Built an AI-powered root-cause analysis proof-of-concept service (FastAPI + Groq, gpt-oss-120b) converting multi-system telecom logs into structured JSON with root causes, summaries, and prioritized recommendations.',
+          'Modeled root-cause analysis logic for 3 complaint categories across 8 backend systems, inserting multi-hop log flows with strict prompt constraints to minimize ungrounded outputs.',
+          'Engineered 8 REST API endpoints (FastAPI, Pydantic) and designed a Python ABC LogDataSource abstraction, deployed on Railway and integrated into a 5-page Next.js dashboard.'
+        ]
+      })
+    },
+    {
+      category: t({ id: 'Proyek Magang · Sistem RAG', en: 'Internship Project · RAG Systems' }),
+      title: t({ 
+        id: 'Chatbot RAG COVID-19 Berbahasa Indonesia', 
+        en: 'Indonesian COVID-19 RAG Chatbot' 
+      }),
+      date: 'Agu 2025 – Nov 2025',
+      tech: 'LangChain · FAISS · Sentence Transformers · Mistral 7B · Ollama · Streamlit',
+      points: t({
+        id: [
+          'Membangun chatbot RAG COVID-19 berbahasa Indonesia menggunakan LangChain, FAISS, dan Sentence Transformers (multilingual MPNet), dengan model Mistral 7B-Instruct lokal via Ollama.',
+          'Merancang fallback 4 tingkat dengan timeout, filter input kata kunci, dan pemeriksaan keamanan keluaran agar bot tetap sesuai topik.',
+          'Dievaluasi dengan 18 kasus uji manual (16 lolos penuh, 1 lolos sebagian, 1 gagal) dengan latensi retrieval <0,5 detik dan respons end-to-end <10 detik pada antarmuka Streamlit.'
+        ],
+        en: [
+          'Built an Indonesian COVID-19 RAG chatbot using LangChain, FAISS, and Sentence Transformers (multilingual MPNet) with local Mistral 7B-Instruct via Ollama.',
+          'Designed a 4-tier fallback mechanism with timeouts, keyword input filters, and output safety checks to keep responses strictly on-topic.',
+          'Evaluated against 18 manual test cases (16 full pass, 1 partial, 1 fail) achieving retrieval latency <0.5s and end-to-end response <10s on a Streamlit interface.'
         ]
       })
     }
@@ -60,8 +82,8 @@ const Projects = () => {
           </h2>
           <p className="text-ink-soft mt-2.5 text-[15.5px]">
             {t({ 
-              id: 'Tugas akhir dan project-based internship yang memperdalam keahlian AI/ML dan data analytics.',
-              en: 'Capstone and project-based internships that deepen AI/ML and data analytics expertise.'
+              id: 'Koleksi proyek sistem LLM/RAG, Computer Vision, dan backend AI yang dibangun dari riset hingga implementasi.',
+              en: 'A collection of LLM/RAG systems, Computer Vision, and AI backend projects built from research to implementation.'
             })}
           </p>
         </div>

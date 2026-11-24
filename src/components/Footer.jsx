@@ -81,6 +81,20 @@ const Footer = () => {
 
         <div className="flex gap-[14px] justify-center flex-wrap mb-[50px]">
           <a 
+            href="mailto:rahmad.hidayad.work@gmail.com" 
+            className="border-[rgba(255,255,255,0.15)] text-[#C9BFBF] bg-[rgba(255,255,255,0.02)] py-[12px] px-6 rounded-[12px] font-medium text-[14px] transition-all duration-300 hover:border-yellow hover:text-yellow hover:-translate-y-1 border flex items-center gap-2 hover:bg-[rgba(255,255,255,0.05)]"
+          >
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M3.5 6.5h17v11h-17z" /><path d="M3.5 7l8.5 6 8.5-6" /></svg>
+            Email
+          </a>
+          <a 
+            href="tel:+6285777145179" 
+            className="border-[rgba(255,255,255,0.15)] text-[#C9BFBF] bg-[rgba(255,255,255,0.02)] py-[12px] px-6 rounded-[12px] font-medium text-[14px] transition-all duration-300 hover:border-yellow hover:text-yellow hover:-translate-y-1 border flex items-center gap-2 hover:bg-[rgba(255,255,255,0.05)]"
+          >
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" /></svg>
+            +62-857-7714-5179
+          </a>
+          <a 
             href="https://linkedin.com/in/rahmadyd" 
             target="_blank" 
             rel="noopener noreferrer"
@@ -103,6 +117,7 @@ const Footer = () => {
         <div className="border-t border-[rgba(255,255,255,0.08)] pt-[28px] flex justify-between items-center flex-wrap gap-[14px] text-[13px] text-[#8C7E7E]">
           <span>© 2026 Rahmad Hidayad. Bengkulu, Indonesia.</span>
           <div className="flex gap-6">
+            <a href="https://rahmadyd.my.id" target="_blank" rel="noopener noreferrer" className="hover:text-yellow transition-colors duration-200">rahmadyd.my.id</a>
             <a href="https://linkedin.com/in/rahmadyd" target="_blank" rel="noopener noreferrer" className="hover:text-yellow transition-colors duration-200">LinkedIn</a>
             <a href="https://github.com/rahmadyd" target="_blank" rel="noopener noreferrer" className="hover:text-yellow transition-colors duration-200">GitHub</a>
           </div>

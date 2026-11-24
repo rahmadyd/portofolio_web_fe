@@ -15,35 +15,35 @@ const About = () => {
               </span>
               <h2 className="text-[clamp(26px,3.2vw,34px)]">
                 {t({ 
-                  id: 'AI Engineer dengan pengalaman production-grade systems.', 
-                  en: 'AI Engineer with production-grade systems experience.' 
+                  id: 'AI Engineer | Computer Vision & Sistem LLM/RAG', 
+                  en: 'AI Engineer | Computer Vision & LLM/RAG Systems' 
                 })}
               </h2>
             </div>
             <div className="flex flex-col gap-[18px]">
               <p className="text-ink-soft text-[16.5px]">
                 {t({
-                  id: 'Saya lulusan Teknik Komputer Telkom University dengan pengalaman end-to-end mengirimkan sistem LLM/RAG dan computer vision production-grade. Membangun AI root-cause-analysis backend (FastAPI + Groq) dengan desain prompt yang mitigasi halusinasi, pipeline semantic search yang serve retrieval dalam <0.5 detik, dan model real-time object detection yang mencapai akurasi 94%.',
-                  en: "I'm a Computer Engineering graduate from Telkom University with hands-on, end-to-end experience shipping production-grade LLM/RAG and computer vision systems. Built an AI root-cause-analysis backend (FastAPI + Groq) with hallucination-mitigating prompt design, a semantic search pipeline serving retrieval in under 0.5s, and a real-time object detection model reaching 94% accuracy."
+                  id: 'AI Engineer dengan pengalaman langsung membangun sistem LLM/RAG, mulai dari perancangan prompt dan evaluasi hingga deployment. Membangun backend proof-of-concept analisis akar masalah (root-cause analysis) untuk log telekomunikasi (FastAPI + Groq) dan chatbot RAG berbahasa Indonesia (LangChain, FAISS, Mistral 7B via Ollama), serta pengalaman computer vision (skripsi YOLOv7, mentoring YOLOv8). Berfokus pada aplikasi LLM yang andal dengan Python.',
+                  en: 'AI Engineer with hands-on experience building LLM/RAG systems, from prompt engineering and evaluation to deployment. Built a root-cause analysis proof-of-concept backend for telecom logs (FastAPI + Groq) and an Indonesian-language RAG chatbot (LangChain, FAISS, Mistral 7B via Ollama), along with computer vision experience (YOLOv7 thesis, YOLOv8 mentoring). Focused on reliable LLM applications with Python.'
                 })}
               </p>
               <p className="text-ink-soft text-[16.5px]">
                 {t({
-                  id: 'Untuk AI/ML engineering, saya merancang sistem RAG menggunakan LangChain, FAISS, Sentence Transformers, mengintegrasikan LLM lokal (Mistral 7B via Ollama) dengan context throttling untuk mengurangi halusinasi, dan membangun guardrail system dua lapis untuk menjaga domain integrity. Saya juga experienced dengan YOLOv7 (PyTorch) untuk computer vision, mencapai akurasi 94% melalui systematic A/B testing dan edge-computing optimization.',
-                  en: 'For AI/ML engineering, I design RAG systems using LangChain, FAISS, Sentence Transformers, integrate local LLMs (Mistral 7B via Ollama) with context throttling to reduce hallucination, and build two-layer guardrail systems for domain integrity. Also experienced with YOLOv7 (PyTorch) for computer vision, reaching 94% accuracy through systematic A/B testing and edge-computing optimization.'
+                  id: 'Lulusan Sarjana Teknik — Teknik Komputer dari Telkom University (IPK 3,20/4,00) dengan konsentrasi Rekayasa Perangkat Lunak, AI, dan Data Engineering. Terus memperdalam keahlian terapan melalui pelatihan seperti Peserta GenAI Learning Path di Alibaba Cloud Indonesia GenAI Hackathon 2025 (mengimplementasikan model Qwen via Alibaba Cloud Model Studio API).',
+                  en: 'Bachelor of Engineering in Computer Engineering graduate from Telkom University (GPA 3.20/4.00) with concentration in Software Engineering, AI, and Data Engineering. Continuously advancing applied skills through programs such as GenAI Learning Path at Alibaba Cloud Indonesia GenAI Hackathon 2025 (implementing Qwen models via Alibaba Cloud Model Studio API).'
                 })}
               </p>
               <p className="text-ink-soft text-[16.5px]">
                 {t({
-                  id: 'Comfortable di full stack: Python untuk AI/ML, TypeScript/React/Next.js untuk frontend, Node.js/FastAPI untuk backend, PostgreSQL untuk database, dan Docker untuk deployment. Fokus pada sistem AI yang reliable, measurable, dan production-ready dengan evaluasi metrik yang jelas.',
-                  en: 'Comfortable across the full stack: Python for AI/ML, TypeScript/React/Next.js for frontend, Node.js/FastAPI for backend, PostgreSQL for database, and Docker for deployment. Focused on reliable, measurable, production-ready AI systems with clear evaluation metrics.'
+                  id: 'Berfokus pada pengembangan aplikasi AI yang andal dan terukur — mulai dari evaluasi metrik performa (Presisi, Recall, F1-Score, Confusion Matrix, hingga latensi sistem end-to-end), perancangan input/output guardrails berbasis aturan, hingga deployment backend REST API dengan Python, FastAPI, dan Railway.',
+                  en: 'Focused on developing reliable and measurable AI applications — from performance metric evaluation (Precision, Recall, F1-Score, Confusion Matrix, and end-to-end latency), rule-based input/output guardrails design, to backend REST API deployment with Python, FastAPI, and Railway.'
                 })}
               </p>
             </div>
             <p className="mt-6 pl-5 border-l-2 border-yellow font-heading text-[17px] text-ink font-medium">
               {t({
-                id: '"Sistem AI yang baik bukan hanya cerdas, tapi reliable, measurable, dan auditable."',
-                en: '"Good AI systems are not just smart, but reliable, measurable, and auditable."'
+                id: '"Berfokus pada aplikasi LLM yang andal dengan Python dan sistem computer vision yang akurat."',
+                en: '"Focused on reliable LLM applications with Python and accurate computer vision systems."'
               })}
             </p>
           </div>

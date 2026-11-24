@@ -19,26 +19,20 @@ const Education = () => {
           <div className="border border-border-custom rounded-custom p-[26px] mb-5">
             <h4 className="text-[17px] mb-1">
               {t({ 
-                id: 'S1 Teknik Komputer', 
+                id: 'Sarjana Teknik — Teknik Komputer', 
                 en: 'Bachelor of Engineering — Computer Engineering' 
               })}
             </h4>
             <div className="text-blue font-semibold text-[14px] mb-2.5">
-              {t({ id: 'Telkom University', en: 'Telkom University' })}
+              {t({ id: 'Telkom University, Indonesia', en: 'Telkom University, Indonesia' })}
             </div>
             <div className="font-mono text-[12px] text-ink-faint mb-3">
-              {t({ id: '2019 – 2023 · IPK 3.20 / 4.00', en: '2019 – 2023 · GPA 3.20 / 4.00' })}
+              {t({ id: '2019 – 2023 · IPK 3,20 / 4,00', en: '2019 – 2023 · GPA 3.20 / 4.00' })}
             </div>
-            <p className="text-[13.5px] text-ink-soft mb-2">
-              {t({ 
-                id: 'Fokus peminatan: Rekayasa Perangkat Lunak & AI.', 
-                en: 'Concentration: Software Engineering & AI.' 
-              })}
-            </p>
             <p className="text-[13.5px] text-ink-soft">
-              {t({
-                id: 'Mata kuliah relevan: Algoritma dan Pemrograman, Pemrograman Berorientasi Objek, Sistem Basis Data, Rekayasa Perangkat Lunak dan Kecerdasan Buatan.',
-                en: 'Relevant courses: Algorithms and Programming, Object-Oriented Programming, Database Systems, Software Engineering, and Artificial Intelligence.'
+              {t({ 
+                id: 'Konsentrasi: Rekayasa Perangkat Lunak, AI, Data Engineering.', 
+                en: 'Concentration: Software Engineering, AI, Data Engineering.' 
               })}
             </p>
           </div>
@@ -47,57 +41,56 @@ const Education = () => {
         <div className="reveal">
           <div className="mb-[34px]">
             <h3 className="text-[15px] mb-4 flex items-center gap-2 before:content-[''] before:w-4 before:h-0.5 before:bg-yellow before:inline-block">
-              {t({ id: 'Sertifikasi', en: 'Certifications' })}
+              {t({ id: 'Pelatihan & Pengembangan Profesional', en: 'Professional Training & Development' })}
             </h3>
-            <div className="flex justify-between gap-3 py-3.5 border-b border-border-custom">
-              <span className="text-[14px] text-ink font-medium">
-                {t({ 
-                  id: 'Big Data Analytics — Project-Based Internship', 
-                  en: 'Big Data Analytics — Project-Based Internship' 
+            <div className="py-3.5 border-b border-border-custom">
+              <div className="flex justify-between items-start gap-3 mb-1">
+                <span className="text-[14px] text-ink font-semibold">
+                  {t({ 
+                    id: 'Peserta GenAI Learning Path — Alibaba Cloud Indonesia GenAI Hackathon 2025', 
+                    en: 'GenAI Learning Path Participant — Alibaba Cloud Indonesia GenAI Hackathon 2025' 
+                  })}
+                </span>
+                <span className="font-mono text-[12px] text-ink-faint whitespace-nowrap">Feb 2025 – Mei 2025</span>
+              </div>
+              <p className="text-[13px] text-ink-soft leading-relaxed mt-1">
+                {t({
+                  id: 'Program Digital Talent Scholarship × Alibaba Cloud × GoTo Group: menyelesaikan learning path GenAI terstruktur selama 3 bulan yang mencakup dasar-dasar AI, etika AI, keterampilan teknis mikro, dan konsep GenAI terapan. Membangun proyek implementasi LLM langsung menggunakan model Qwen melalui API Alibaba Cloud Model Studio.',
+                  en: 'Digital Talent Scholarship × Alibaba Cloud × GoTo Group program: completed a 3-month structured GenAI learning path covering AI fundamentals, AI ethics, technical micro-skills, and applied GenAI concepts. Built hands-on LLM implementation projects using Qwen models via Alibaba Cloud Model Studio API.'
                 })}
-              </span>
-              <span className="font-mono text-[12px] text-ink-faint whitespace-nowrap">2025</span>
-            </div>
-            <div className="flex justify-between gap-3 py-3.5">
-              <span className="text-[14px] text-ink font-medium">
-                {t({ 
-                  id: 'IT Support — Fresh Graduate Academy (Digital Talent Scholarship)', 
-                  en: 'IT Support — Fresh Graduate Academy (Digital Talent Scholarship)' 
-                })}
-              </span>
-              <span className="font-mono text-[12px] text-ink-faint whitespace-nowrap">2024</span>
+              </p>
             </div>
           </div>
           <div className="mb-[34px]">
             <h3 className="text-[15px] mb-4 flex items-center gap-2 before:content-[''] before:w-4 before:h-0.5 before:bg-yellow before:inline-block">
-              {t({ id: 'Penghargaan & Prestasi', en: 'Awards & Achievements' })}
+              {t({ id: 'Pencapaian', en: 'Achievements' })}
             </h3>
             <div className="flex justify-between gap-3 py-3.5 border-b border-border-custom">
               <span className="text-[14px] text-ink font-medium">
                 {t({ 
-                  id: 'Medali Emas — BCS World Virtual Choir (Kompetisi Internasional)', 
-                  en: 'Gold Medalist — BCS World Virtual Choir (International Competition)' 
+                  id: 'AI Apprenticeship, Startup Campus (MSIB Angkatan 3, 2022) — Juara 3, Kompetisi AI Startup Campus', 
+                  en: 'AI Apprenticeship, Startup Campus (MSIB Batch 3, 2022) — 3rd Place, Startup Campus AI Competition' 
                 })}
               </span>
-              <span className="font-mono text-[12px] text-ink-faint whitespace-nowrap">2020</span>
+              <span className="font-mono text-[12px] text-ink-faint whitespace-nowrap">2022</span>
             </div>
             <div className="flex justify-between gap-3 py-3.5 border-b border-border-custom">
               <span className="text-[14px] text-ink font-medium">
                 {t({ 
-                  id: 'Top 120 — Innovillage 2021 (Telkom Indonesia)', 
-                  en: 'Top 120 — Innovillage 2021 (Telkom Indonesia)' 
+                  id: '150 Besar — Innovillage Telkom Indonesia', 
+                  en: 'Top 150 — Innovillage Telkom Indonesia' 
                 })}
               </span>
-              <span className="font-mono text-[12px] text-ink-faint whitespace-nowrap">2021</span>
+              <span className="font-mono text-[12px] text-ink-faint whitespace-nowrap">2022</span>
             </div>
             <div className="flex justify-between gap-3 py-3.5">
               <span className="text-[14px] text-ink font-medium">
                 {t({ 
-                  id: 'Top 150 — Innovillage 2022 (Telkom Indonesia)', 
-                  en: 'Top 150 — Innovillage 2022 (Telkom Indonesia)' 
+                  id: '120 Besar — Innovillage Telkom Indonesia', 
+                  en: 'Top 120 — Innovillage Telkom Indonesia' 
                 })}
               </span>
-              <span className="font-mono text-[12px] text-ink-faint whitespace-nowrap">2022</span>
+              <span className="font-mono text-[12px] text-ink-faint whitespace-nowrap">2021</span>
             </div>
           </div>
         </div>

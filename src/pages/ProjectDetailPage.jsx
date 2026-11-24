@@ -1,21 +1,32 @@
 import { Link } from 'react-router-dom';
 import { useState } from 'react';
 import Navbar from '../components/Navbar';
+import { useLanguage } from '../contexts/LanguageContext';
 
 const ProjectDetailPage = () => {
   const [selectedImage, setSelectedImage] = useState(null);
+  const { t } = useLanguage();
 
   const projects = [
     {
       id: 1,
-      title: "InsightOps — AI-Powered Telecom Log Analytics Platform",
-      category: "AI/LLM · Frontend",
-      role: "AI Engineer & Frontend Developer",
-      duration: "Nov 2025 - Present",
-      company: "Quorvin",
-      description: "Built AI root-cause analysis service with FastAPI + Groq that processes multi-system telco logs into structured JSON with 5-page Next.js dashboard.",
-      technologies: ["Next.js", "TypeScript", "FastAPI", "Groq API", "Shadcn UI", "Recharts", "Framer Motion"],
-      metrics: "17+ reusable components · 8 REST endpoints",
+      title: t({ 
+        id: "InsightOps — Produk Analitik Log Telekomunikasi Milik Perusahaan", 
+        en: "InsightOps — Proprietary Telecom Log Analytics Product" 
+      }),
+      category: "AI/LLM · Backend & Systems",
+      role: t({ id: "AI Engineer (Freelance)", en: "AI Engineer (Freelance)" }),
+      duration: "Nov 2025 – Okt 2026",
+      company: "Quorvin (Jarak Jauh)",
+      description: t({
+        id: "Membangun layanan proof-of-concept analisis akar masalah berbasis AI (FastAPI + Groq, gpt-oss-120b) yang mengubah log telekomunikasi lintas sistem menjadi JSON terstruktur berisi potensi akar masalah, ringkasan, dan rekomendasi yang diprioritaskan. Memodelkan 3 kategori keluhan pada 8 sistem backend dengan alur multi-hop, 8 endpoint REST API, abstraksi LogDataSource Python ABC, dan deployment Railway yang terintegrasi ke dashboard Next.js 5 halaman.",
+        en: "Built an AI root-cause analysis proof-of-concept service (FastAPI + Groq, gpt-oss-120b) converting multi-system telecom logs into structured JSON with root causes, summaries, and prioritized recommendations. Modeled 3 complaint categories across 8 backend systems with multi-hop flows, 8 REST endpoints, Python ABC LogDataSource abstraction, and Railway deployment integrated into a 5-page Next.js dashboard."
+      }),
+      technologies: ["FastAPI", "Groq API", "gpt-oss-120b", "Python", "Pydantic", "Railway", "Next.js"],
+      metrics: t({ 
+        id: "8 endpoint REST API · Multi-hop log flows · Abstraksi Python ABC", 
+        en: "8 REST endpoints · Multi-hop log flows · Python ABC abstraction" 
+      }),
       image: "/insightops.png",
       links: {
         demo: "https://canva.link/1chtan3ara98cgs",
@@ -24,14 +35,23 @@ const ProjectDetailPage = () => {
     },
     {
       id: 2,
-      title: "RAG Chatbot COVID-19 Indonesia",
-      category: "AI/LLM · RAG",
-      role: "AI Engineer (Internship Project)",
-      duration: "Aug 2025 - Nov 2025",
-      company: "ProcodeCG",
-      description: "Built RAG chatbot pipeline with LangChain, FAISS, and Sentence Transformers achieving <0.5s semantic search latency with 4-tier fallback mechanism.",
-      technologies: ["LangChain", "FAISS", "Sentence Transformers", "Mistral 7B", "Streamlit", "Ollama"],
-      metrics: "8.5/10 quality score · <10s response time",
+      title: t({ 
+        id: "Chatbot RAG COVID-19 Berbahasa Indonesia", 
+        en: "Indonesian COVID-19 RAG Chatbot" 
+      }),
+      category: "AI/LLM · RAG Systems",
+      role: t({ id: "AI Engineer (Proyek Magang)", en: "AI Engineer (Internship Project)" }),
+      duration: "Agu 2025 – Nov 2025",
+      company: "ProCodeCG",
+      description: t({
+        id: "Membangun chatbot RAG COVID-19 berbahasa Indonesia menggunakan LangChain, FAISS, dan Sentence Transformers (multilingual MPNet), dengan model Mistral 7B-Instruct lokal via Ollama. Merancang fallback 4 tingkat dengan timeout, filter input kata kunci, pemeriksaan keamanan keluaran, dan UI Streamlit dengan chat multi-ruang dan debug retrieval.",
+        en: "Built an Indonesian COVID-19 RAG chatbot using LangChain, FAISS, and Sentence Transformers (multilingual MPNet) with local Mistral 7B-Instruct via Ollama. Designed a 4-tier fallback with timeouts, keyword input filters, output safety checks, and a Streamlit UI with multi-room chat and retrieval debugging."
+      }),
+      technologies: ["LangChain", "FAISS", "Sentence Transformers", "Mistral 7B", "Ollama", "Streamlit", "Python"],
+      metrics: t({ 
+        id: "Latensi retrieval <0.5 detik · Waktu respons <10 detik · 18 kasus uji", 
+        en: "Retrieval latency <0.5s · Response time <10s · 18 test cases" 
+      }),
       image: "/ragchatbot.png",
       links: {
         github: "https://github.com/rahmadyd/chatbot_covid19_intern_procodecg",
@@ -40,30 +60,23 @@ const ProjectDetailPage = () => {
     },
     {
       id: 3,
-      title: "Website Profil Perusahaan Quorvin",
-      category: "Web Development",
-      role: "Frontend Developer",
-      duration: "Jan 2026 - Feb 2026",
-      company: "Quorvin",
-      description: "Developed 4-page SPA company profile for AI consulting firm using React 19 and Vite with 11 modular UI components and async contact form via Formspree.",
-      technologies: ["React 19", "Vite", "React Router v7", "Tailwind CSS", "Formspree"],
-      metrics: "11 modular components · Deployed on GitHub Pages",
-      image: "/quorvin.png",
-      links: {
-        website: "https://quorvin.biz.id/",
-        github: null
-      }
-    },
-    {
-      id: 4,
-      title: "Elderly Real-Time Monitoring System — YOLOv7",
-      category: "Computer Vision · AI",
-      role: "AI Engineer (Capstone Project)",
-      duration: "2022 - 2023",
+      title: t({ 
+        id: "Sistem Pemantauan Lansia Real-Time — YOLOv7", 
+        en: "Elderly Real-Time Monitoring System — YOLOv7" 
+      }),
+      category: "Computer Vision · Skripsi",
+      role: t({ id: "AI Engineer (Skripsi)", en: "AI Engineer (Thesis)" }),
+      duration: "2022 – 2023",
       company: "Telkom University",
-      description: "Reached 94% detection accuracy by training and optimizing YOLOv7 (PyTorch) through systematic A/B testing with real-time webcam inference using edge-computing optimization.",
-      technologies: ["YOLOv7", "PyTorch", "React", "FastAPI", "ONNX", "Tailwind CSS"],
-      metrics: "94% accuracy · Real-time detection",
+      description: t({
+        id: "Mengembangkan sistem deteksi lansia vs. non-lansia secara real-time menggunakan YOLOv7 dan PyTorch, dilatih pada dataset 1.200 gambar yang dianotasi dan diaugmentasi dengan Roboflow. Mengevaluasi prediksi dengan confusion matrix dan diuji langsung melalui webcam stabil pada jarak 4–6 m, pencahayaan 24–65 lux, dan sudut 0°–30°.",
+        en: "Developed a real-time elderly vs. non-elderly detection system using YOLOv7 and PyTorch, trained on a dataset of 1,200 images annotated and augmented with Roboflow. Evaluated with a confusion matrix and tested live via webcam stably at 4–6m distance, 24–65 lux lighting, and 0°–30° angles."
+      }),
+      technologies: ["YOLOv7", "PyTorch", "Roboflow", "Google Colab", "Python", "Confusion Matrix"],
+      metrics: t({ 
+        id: "Akurasi 94% · Presisi 100% · Recall 89% · F1-Score 94%", 
+        en: "94% Accuracy · 100% Precision · 89% Recall · 94% F1-Score" 
+      }),
       image: "/yolov7dashboard.jpeg",
       links: {
         github: "https://github.com/rahmadyd/yolov7_elderly_detect_deploy",
@@ -71,18 +84,26 @@ const ProjectDetailPage = () => {
       }
     },
     {
-      id: 5,
-      title: "Data Analyst Intern — Kimia Farma Dashboard",
-      category: "Data Analytics",
-      role: "Data Analyst Intern",
-      duration: "Jan 2025 - Feb 2025",
-      company: "Rakamin Academy (Project-Based Internship)",
-      description: "Built stakeholder-facing dashboards in Google BigQuery + Looker Studio through EDA and optimized SQL queries for real-time data accessibility on pharmaceutical dataset.",
-      technologies: ["Python", "SQL", "Google BigQuery", "Looker Studio", "Data Visualization"],
-      metrics: "Real-time dashboard · Optimized SQL queries",
-      image: "/Dashboardkimiafarma.png",
+      id: 4,
+      title: t({ 
+        id: "Mentoring Deteksi Kualitas Beras — YOLOv8 & SAHI", 
+        en: "Rice Quality Detection Mentoring — YOLOv8 & SAHI" 
+      }),
+      category: "Computer Vision · Mentoring",
+      role: t({ id: "Mentor AI (Freelance)", en: "AI Mentor (Freelance)" }),
+      duration: "Jan 2024 – Des 2024",
+      company: t({ id: "Jarak Jauh", en: "Remote" }),
+      description: t({
+        id: "Membimbing mahasiswa tingkat akhir dalam mengembangkan sistem deteksi kualitas beras menggunakan YOLOv8 dan SAHI (Slicing Aided Hyper Inference) untuk objek berukuran kecil, serta memandu alur anotasi dan augmentasi dataset dengan Roboflow.",
+        en: "Mentored final-year students in developing a rice quality detection system using YOLOv8 and SAHI (Slicing Aided Hyper Inference) for small-scale objects, while guiding dataset annotation and augmentation workflows with Roboflow."
+      }),
+      technologies: ["YOLOv8", "SAHI", "Roboflow", "PyTorch", "Python", "Computer Vision"],
+      metrics: t({ 
+        id: "Mentoring Tugas Akhir · Small Object Detection (SAHI)", 
+        en: "Capstone Mentoring · Small Object Detection (SAHI)" 
+      }),
+      image: "/yolov7dashboard.jpeg",
       links: {
-        // Dashboard is private (company data) - GitHub repo with documentation coming soon
         github: null,
         demo: null
       }
@@ -100,13 +121,16 @@ const ProjectDetailPage = () => {
               to="/"
               className="inline-flex items-center gap-2 text-[14px] text-blue font-semibold mb-6 hover:text-blue-deep transition-colors"
             >
-              ← Back to Home
+              ← {t({ id: 'Kembali ke Beranda', en: 'Back to Home' })}
             </Link>
             <h1 className="text-[clamp(36px,5vw,56px)] leading-[1.05] mb-3">
-              All <span className="text-blue">Projects</span>
+              {t({ id: 'Semua ', en: 'All ' })}<span className="text-blue">{t({ id: 'Proyek', en: 'Projects' })}</span>
             </h1>
             <p className="text-[17px] text-ink-soft max-w-[640px]">
-              A collection of production-grade AI/ML systems, web applications, and data analytics projects I've shipped — from concept to deployment.
+              {t({ 
+                id: 'Koleksi sistem LLM/RAG, Computer Vision, dan backend AI terapan yang dikembangkan dari riset, evaluasi, hingga implementasi.',
+                en: 'A collection of applied LLM/RAG systems, Computer Vision, and AI backend projects developed from research and evaluation to implementation.'
+              })}
             </p>
           </div>
 
@@ -196,27 +220,7 @@ const ProjectDetailPage = () => {
                         rel="noopener noreferrer"
                         className="flex-1 text-center py-2.5 px-3 text-[13px] font-semibold rounded-[8px] bg-blue text-white transition-all duration-200 hover:bg-blue-deep hover:shadow-md"
                       >
-                        View Demo
-                      </a>
-                    )}
-                    {project.links.website && (
-                      <a 
-                        href={project.links.website}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="flex-1 text-center py-2.5 px-3 text-[13px] font-semibold rounded-[8px] bg-blue text-white transition-all duration-200 hover:bg-blue-deep hover:shadow-md"
-                      >
-                        Visit Website
-                      </a>
-                    )}
-                    {project.links.dashboard && (
-                      <a 
-                        href={project.links.dashboard}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="flex-1 text-center py-2.5 px-3 text-[13px] font-semibold rounded-[8px] bg-blue text-white transition-all duration-200 hover:bg-blue-deep hover:shadow-md"
-                      >
-                        View Dashboard
+                        {t({ id: 'Lihat Demo', en: 'View Demo' })}
                       </a>
                     )}
                     {project.links.github && (
@@ -273,7 +277,7 @@ const ProjectDetailPage = () => {
             {/* Title Bar */}
             <div className="bg-gradient-to-t from-black/70 via-black/40 to-transparent absolute bottom-0 left-0 right-0 p-6 pt-12">
               <h3 className="text-white text-lg font-semibold drop-shadow-lg">{selectedImage.title}</h3>
-              <p className="text-white/80 text-sm mt-1">Click anywhere to close</p>
+              <p className="text-white/80 text-sm mt-1">{t({ id: 'Klik di mana saja untuk menutup', en: 'Click anywhere to close' })}</p>
             </div>
           </div>
         </div>

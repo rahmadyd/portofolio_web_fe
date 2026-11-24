@@ -10,58 +10,86 @@ const Skills = () => {
       bgColor: "bg-yellow-soft",
       textColor: "text-yellow-deep",
       skills: t({
-        id: ['LangChain', 'RAG Systems', 'Semantic Search', 'FAISS', 'Sentence Transformers', 'Mistral 7B', 'Groq API', 'Ollama', 'LLM Guardrails', 'Prompt Engineering'],
-        en: ['LangChain', 'RAG Systems', 'Semantic Search', 'FAISS', 'Sentence Transformers', 'Mistral 7B', 'Groq API', 'Ollama', 'LLM Guardrails', 'Prompt Engineering']
+        id: [
+          'LangChain', 
+          'RAG Systems', 
+          'Semantic Search', 
+          'FAISS', 
+          'Sentence Transformers', 
+          'Mistral 7B', 
+          'Qwen (Alibaba Cloud Model Studio)', 
+          'Groq API', 
+          'Ollama', 
+          'Prompt Engineering', 
+          'Input/Output Guardrails (berbasis aturan)', 
+          'JSON Output Parsing'
+        ],
+        en: [
+          'LangChain', 
+          'RAG Systems', 
+          'Semantic Search', 
+          'FAISS', 
+          'Sentence Transformers', 
+          'Mistral 7B', 
+          'Qwen (Alibaba Cloud Model Studio)', 
+          'Groq API', 
+          'Ollama', 
+          'Prompt Engineering', 
+          'Rule-based Input/Output Guardrails', 
+          'JSON Output Parsing'
+        ]
       })
     },
     {
-      title: t({ id: 'Computer Vision', en: 'Computer Vision' }),
+      title: t({ id: 'Computer Vision & ML', en: 'Computer Vision & ML' }),
       icon: "👁️",
       bgColor: "bg-yellow-soft",
       textColor: "text-yellow-deep",
       skills: t({
-        id: ['YOLOv7', 'PyTorch', 'Real-Time Detection', 'Model Optimization', 'Performance Evaluation'],
-        en: ['YOLOv7', 'PyTorch', 'Real-Time Detection', 'Model Optimization', 'Performance Evaluation']
+        id: [
+          'YOLOv7', 
+          'YOLOv8', 
+          'SAHI', 
+          'PyTorch', 
+          'Roboflow', 
+          'Google Colab', 
+          'Presisi/Recall/F1'
+        ],
+        en: [
+          'YOLOv7', 
+          'YOLOv8', 
+          'SAHI', 
+          'PyTorch', 
+          'Roboflow', 
+          'Google Colab', 
+          'Precision/Recall/F1'
+        ]
       })
     },
     {
-      title: t({ id: 'Data Engineering', en: 'Data Engineering' }),
-      icon: "📊",
-      bgColor: "bg-yellow-soft",
-      textColor: "text-yellow-deep",
-      skills: t({
-        id: ['Python', 'SQL (PostgreSQL)', 'Google BigQuery', 'Looker Studio', 'EDA', 'Data Pipelines', 'Big Data Analytics'],
-        en: ['Python', 'SQL (PostgreSQL)', 'Google BigQuery', 'Looker Studio', 'EDA', 'Data Pipelines', 'Big Data Analytics']
-      })
-    },
-    {
-      title: t({ id: 'Backend & API', en: 'Backend & API' }),
+      title: t({ id: 'Backend & Deployment', en: 'Backend & Deployment' }),
       icon: "⚡",
       bgColor: "bg-yellow-soft",
       textColor: "text-yellow-deep",
       skills: t({
-        id: ['Node.js', 'FastAPI', 'Pydantic', 'REST API Integration', 'Docker', 'Streamlit'],
-        en: ['Node.js', 'FastAPI', 'Pydantic', 'REST API Integration', 'Docker', 'Streamlit']
-      })
-    },
-    {
-      title: t({ id: 'Frontend & UI', en: 'Frontend & UI' }),
-      icon: "◧",
-      bgColor: "bg-yellow-soft",
-      textColor: "text-yellow-deep",
-      skills: t({
-        id: ['React', 'Next.js', 'TypeScript', 'Tailwind CSS', 'Shadcn UI', 'Recharts', 'Framer Motion'],
-        en: ['React', 'Next.js', 'TypeScript', 'Tailwind CSS', 'Shadcn UI', 'Recharts', 'Framer Motion']
-      })
-    },
-    {
-      title: t({ id: 'Tools', en: 'Tools' }),
-      icon: "⚙",
-      bgColor: "bg-yellow-soft",
-      textColor: "text-yellow-deep",
-      skills: t({
-        id: ['Git/GitHub', 'Postman', 'Model Evaluation Metrics'],
-        en: ['Git/GitHub', 'Postman', 'Model Evaluation Metrics']
+        id: [
+          'Python', 
+          'FastAPI', 
+          'Pydantic', 
+          'REST API Integration', 
+          'Streamlit', 
+          'Railway', 
+          'Git/GitHub'
+        ],
+        en: [
+          'Python', 
+          'FastAPI', 
+          'Pydantic', 
+          'REST API Integration', 
+          'Streamlit', 
+          'Railway', 
+          'Git/GitHub'
+        ]
       })
     }
   ];
@@ -79,8 +107,8 @@ const Skills = () => {
           </h2>
           <p className="text-ink-soft mt-2.5 text-[15.5px]">
             {t({ 
-              id: 'Tech stack dari AI/ML engineering sampai full-stack development.',
-              en: 'Tech stack from AI/ML engineering to full-stack development.'
+              id: 'Keahlian teknis mencakup AI & LLM, Computer Vision, serta Backend & Deployment.',
+              en: 'Technical skills covering AI & LLM, Computer Vision, and Backend & Deployment.'
             })}
           </p>
         </div>
