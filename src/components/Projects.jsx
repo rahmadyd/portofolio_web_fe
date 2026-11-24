@@ -5,7 +5,7 @@ const Projects = () => {
 
   const projects = [
     {
-      category: t({ id: 'Skripsi · Computer Vision', en: 'Thesis · Computer Vision' }),
+      category: t({ id: 'Skripsi · Computer Vision', en: 'Undergraduate Thesis — Computer Vision' }),
       title: t({ 
         id: 'Sistem Pemantauan Lansia Real-Time', 
         en: 'Elderly Real-Time Monitoring System' 
@@ -19,19 +19,19 @@ const Projects = () => {
           'Diuji langsung melalui webcam; deteksi stabil pada jarak 4–6 m, pencahayaan 24–65 lux, dan sudut 0°–30°.'
         ],
         en: [
-          'Developed a real-time elderly vs. non-elderly detection system using YOLOv7 and PyTorch, trained on a dataset of 1,200 images annotated and augmented with Roboflow.',
-          'Evaluated predictions using a confusion matrix, achieving 94% accuracy, 100% precision, 89% recall, and 94% F1-score on the validation set.',
-          'Tested live via webcam; detection was stable at 4–6 m distance, 24–65 lux illumination, and 0°–30° angles.'
+          'Developed a real-time elderly vs. non-elderly detection system using YOLOv7 and PyTorch, trained on a 1,200-image dataset annotated and augmented using Roboflow.',
+          'Evaluated elderly vs. non-elderly predictions using a confusion matrix, achieving 94% accuracy, 100% precision, 89% recall, and 94% F1-score on the validation set.',
+          'Tested live via webcam; detection was stable at 4–6 m, 24–65 lux, and 0°–30°.'
         ]
       })
     },
     {
-      category: t({ id: 'Produk Perusahaan · AI & LLM', en: 'Company Product · AI & LLM' }),
+      category: t({ id: 'Produk Perusahaan · AI & LLM', en: 'Company-Owned Product · AI & LLM' }),
       title: t({ 
         id: 'InsightOps — Produk Analitik Log Telekomunikasi', 
         en: 'InsightOps — Telecom Log Analytics Product' 
       }),
-      date: 'Nov 2025 – Okt 2026',
+      date: t({ id: 'Nov 2025 – Okt 2026', en: 'Nov 2025 – Oct 2026' }),
       tech: 'FastAPI · Groq · gpt-oss-120b · Python · Pydantic · Railway · Next.js',
       points: t({
         id: [
@@ -40,9 +40,9 @@ const Projects = () => {
           'Membangun 8 endpoint REST API (FastAPI, Pydantic) serta merancang abstraksi LogDataSource Python ABC, di-deploy di Railway dan diintegrasikan ke dashboard Next.js 5 halaman.'
         ],
         en: [
-          'Built an AI-powered root-cause analysis proof-of-concept service (FastAPI + Groq, gpt-oss-120b) converting multi-system telecom logs into structured JSON with root causes, summaries, and prioritized recommendations.',
-          'Modeled root-cause analysis logic for 3 complaint categories across 8 backend systems, inserting multi-hop log flows with strict prompt constraints to minimize ungrounded outputs.',
-          'Engineered 8 REST API endpoints (FastAPI, Pydantic) and designed a Python ABC LogDataSource abstraction, deployed on Railway and integrated into a 5-page Next.js dashboard.'
+          'Built a proof-of-concept AI root-cause-analysis service (FastAPI + Groq, gpt-oss-120b) that turns multi-system telco logs into structured JSON with potential root causes, a summary, and prioritized recommendations.',
+          'Modeled root-cause-analysis logic for 3 complaint categories across 8 backend systems, injecting multi-hop log flows with prompt constraints to limit unsupported outputs.',
+          'Built 8 REST API endpoints (FastAPI, Pydantic) and designed a Python ABC-based LogDataSource abstraction, deployed on Railway and integrated into a 5-page Next.js dashboard.'
         ]
       })
     },
@@ -50,9 +50,9 @@ const Projects = () => {
       category: t({ id: 'Proyek Magang · Sistem RAG', en: 'Internship Project · RAG Systems' }),
       title: t({ 
         id: 'Chatbot RAG COVID-19 Berbahasa Indonesia', 
-        en: 'Indonesian COVID-19 RAG Chatbot' 
+        en: 'Indonesian-Language COVID-19 RAG Chatbot' 
       }),
-      date: 'Agu 2025 – Nov 2025',
+      date: t({ id: 'Agu 2025 – Nov 2025', en: 'Aug 2025 – Nov 2025' }),
       tech: 'LangChain · FAISS · Sentence Transformers · Mistral 7B · Ollama · Streamlit',
       points: t({
         id: [
@@ -61,9 +61,9 @@ const Projects = () => {
           'Dievaluasi dengan 18 kasus uji manual (16 lolos penuh, 1 lolos sebagian, 1 gagal) dengan latensi retrieval <0,5 detik dan respons end-to-end <10 detik pada antarmuka Streamlit.'
         ],
         en: [
-          'Built an Indonesian COVID-19 RAG chatbot using LangChain, FAISS, and Sentence Transformers (multilingual MPNet) with local Mistral 7B-Instruct via Ollama.',
-          'Designed a 4-tier fallback mechanism with timeouts, keyword input filters, and output safety checks to keep responses strictly on-topic.',
-          'Evaluated against 18 manual test cases (16 full pass, 1 partial, 1 fail) achieving retrieval latency <0.5s and end-to-end response <10s on a Streamlit interface.'
+          'Built an Indonesian-language COVID-19 RAG chatbot using LangChain, FAISS, and Sentence Transformers (multilingual MPNet), with a local Mistral 7B-Instruct model served via Ollama.',
+          'Designed a 4-tier fallback with timeouts, plus a keyword-based input filter and an output safety check to keep the bot on-topic.',
+          'Evaluated with 18 manually designed test cases (16 full passes, 1 partial pass, 1 failure); observed retrieval latency below 0.5s and end-to-end response time below 10s on a Streamlit interface.'
         ]
       })
     }

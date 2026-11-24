@@ -15,12 +15,12 @@ const Hero = () => {
           </span>
           <h1 className="text-[clamp(36px,5vw,56px)] leading-[1.05] mb-5">
             Rahmad Hidayad,<br />
-            <span className="text-blue">{t({ id: 'AI Engineer', en: 'AI Engineer' })}</span> | {t({ id: 'Computer Vision & Sistem LLM/RAG', en: 'Computer Vision & LLM/RAG Systems' })}
+            <span className="text-blue">{t({ id: 'AI Engineer', en: 'AI Engineer' })}</span> | {t({ id: 'Computer Vision & Sistem LLM/RAG', en: 'LLM/RAG Systems' })}
           </h1>
           <p className="text-[17px] text-ink-soft max-w-[540px] mb-[30px] leading-relaxed">
             {t({ 
               id: 'AI Engineer dengan pengalaman langsung membangun sistem LLM/RAG, mulai dari perancangan prompt dan evaluasi hingga deployment. Membangun backend proof-of-concept analisis akar masalah (root-cause analysis) untuk log telekomunikasi (FastAPI + Groq) dan chatbot RAG berbahasa Indonesia (LangChain, FAISS, Mistral 7B via Ollama), serta pengalaman computer vision (skripsi YOLOv7, mentoring YOLOv8). Berfokus pada aplikasi LLM yang andal dengan Python.',
-              en: 'AI Engineer with hands-on experience building LLM/RAG systems from prompt engineering and evaluation to deployment. Built a root-cause analysis proof-of-concept backend for telecom logs (FastAPI + Groq) and an Indonesian RAG chatbot (LangChain, FAISS, Mistral 7B via Ollama), alongside computer vision experience (YOLOv7 thesis, YOLOv8 mentoring). Focused on reliable LLM applications with Python.'
+              en: 'AI Engineer with hands-on experience building LLM/RAG systems, from prompt design and evaluation through deployment. Built a proof-of-concept root-cause-analysis backend for telco logs (FastAPI + Groq) and an Indonesian-language RAG chatbot (LangChain, FAISS, Mistral 7B via Ollama), with additional computer vision experience (YOLOv7 thesis, YOLOv8 mentoring). Focused on reliable LLM applications in Python.'
             })}
           </p>
           <div className="flex gap-[14px] flex-wrap mb-[36px]">

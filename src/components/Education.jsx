@@ -27,12 +27,12 @@ const Education = () => {
               {t({ id: 'Telkom University, Indonesia', en: 'Telkom University, Indonesia' })}
             </div>
             <div className="font-mono text-[12px] text-ink-faint mb-3">
-              {t({ id: '2019 – 2023 · IPK 3,20 / 4,00', en: '2019 – 2023 · GPA 3.20 / 4.00' })}
+              {t({ id: '2019 – 2023 · IPK 3,20 / 4,00', en: '2019 – 2023 · GPA 3.20/4.00' })}
             </div>
             <p className="text-[13.5px] text-ink-soft">
               {t({ 
                 id: 'Konsentrasi: Rekayasa Perangkat Lunak, AI, Data Engineering.', 
-                en: 'Concentration: Software Engineering, AI, Data Engineering.' 
+                en: 'Concentration: Software Engineering, AI, Data Engineering' 
               })}
             </p>
           </div>
@@ -41,7 +41,7 @@ const Education = () => {
         <div className="reveal">
           <div className="mb-[34px]">
             <h3 className="text-[15px] mb-4 flex items-center gap-2 before:content-[''] before:w-4 before:h-0.5 before:bg-yellow before:inline-block">
-              {t({ id: 'Pelatihan & Pengembangan Profesional', en: 'Professional Training & Development' })}
+              {t({ id: 'Pelatihan & Pengembangan Profesional', en: 'Training & Professional Development' })}
             </h3>
             <div className="py-3.5 border-b border-border-custom">
               <div className="flex justify-between items-start gap-3 mb-1">
@@ -51,12 +51,14 @@ const Education = () => {
                     en: 'GenAI Learning Path Participant — Alibaba Cloud Indonesia GenAI Hackathon 2025' 
                   })}
                 </span>
-                <span className="font-mono text-[12px] text-ink-faint whitespace-nowrap">Feb 2025 – Mei 2025</span>
+                <span className="font-mono text-[12px] text-ink-faint whitespace-nowrap">
+                  {t({ id: 'Feb 2025 – Mei 2025', en: 'Feb 2025 – May 2025' })}
+                </span>
               </div>
               <p className="text-[13px] text-ink-soft leading-relaxed mt-1">
                 {t({
                   id: 'Program Digital Talent Scholarship × Alibaba Cloud × GoTo Group: menyelesaikan learning path GenAI terstruktur selama 3 bulan yang mencakup dasar-dasar AI, etika AI, keterampilan teknis mikro, dan konsep GenAI terapan. Membangun proyek implementasi LLM langsung menggunakan model Qwen melalui API Alibaba Cloud Model Studio.',
-                  en: 'Digital Talent Scholarship × Alibaba Cloud × GoTo Group program: completed a 3-month structured GenAI learning path covering AI fundamentals, AI ethics, technical micro-skills, and applied GenAI concepts. Built hands-on LLM implementation projects using Qwen models via Alibaba Cloud Model Studio API.'
+                  en: 'Digital Talent Scholarship × Alibaba Cloud × GoTo Group program: completed a structured 3-month GenAI learning path covering AI fundamentals, AI ethics, technical micro-skills, and applied GenAI concepts. Built a hands-on LLM implementation project using Qwen models through the Alibaba Cloud Model Studio API.'
                 })}
               </p>
             </div>
@@ -69,7 +71,7 @@ const Education = () => {
               <span className="text-[14px] text-ink font-medium">
                 {t({ 
                   id: 'AI Apprenticeship, Startup Campus (MSIB Angkatan 3, 2022) — Juara 3, Kompetisi AI Startup Campus', 
-                  en: 'AI Apprenticeship, Startup Campus (MSIB Batch 3, 2022) — 3rd Place, Startup Campus AI Competition' 
+                  en: 'AI Apprenticeship, Startup Campus (MSIB Batch 3, 2022) — 3rd place, Startup Campus AI Competition' 
                 })}
               </span>
               <span className="font-mono text-[12px] text-ink-faint whitespace-nowrap">2022</span>
@@ -78,7 +80,7 @@ const Education = () => {
               <span className="text-[14px] text-ink font-medium">
                 {t({ 
                   id: '150 Besar — Innovillage Telkom Indonesia', 
-                  en: 'Top 150 — Innovillage Telkom Indonesia' 
+                  en: 'Top 150 (2022), Innovillage Telkom Indonesia' 
                 })}
               </span>
               <span className="font-mono text-[12px] text-ink-faint whitespace-nowrap">2022</span>
@@ -87,7 +89,7 @@ const Education = () => {
               <span className="text-[14px] text-ink font-medium">
                 {t({ 
                   id: '120 Besar — Innovillage Telkom Indonesia', 
-                  en: 'Top 120 — Innovillage Telkom Indonesia' 
+                  en: 'Top 120 (2021), Innovillage Telkom Indonesia' 
                 })}
               </span>
               <span className="font-mono text-[12px] text-ink-faint whitespace-nowrap">2021</span>

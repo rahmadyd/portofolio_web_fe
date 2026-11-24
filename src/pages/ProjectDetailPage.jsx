@@ -12,15 +12,15 @@ const ProjectDetailPage = () => {
       id: 1,
       title: t({ 
         id: "InsightOps — Produk Analitik Log Telekomunikasi Milik Perusahaan", 
-        en: "InsightOps — Proprietary Telecom Log Analytics Product" 
+        en: "InsightOps — Company-Owned Telecom Log Analytics Product" 
       }),
       category: "AI/LLM · Backend & Systems",
       role: t({ id: "AI Engineer (Freelance)", en: "AI Engineer (Freelance)" }),
-      duration: "Nov 2025 – Okt 2026",
-      company: "Quorvin (Jarak Jauh)",
+      duration: t({ id: "Nov 2025 – Okt 2026", en: "Nov 2025 – Oct 2026" }),
+      company: t({ id: "Quorvin (Jarak Jauh)", en: "Quorvin (Remote)" }),
       description: t({
         id: "Membangun layanan proof-of-concept analisis akar masalah berbasis AI (FastAPI + Groq, gpt-oss-120b) yang mengubah log telekomunikasi lintas sistem menjadi JSON terstruktur berisi potensi akar masalah, ringkasan, dan rekomendasi yang diprioritaskan. Memodelkan 3 kategori keluhan pada 8 sistem backend dengan alur multi-hop, 8 endpoint REST API, abstraksi LogDataSource Python ABC, dan deployment Railway yang terintegrasi ke dashboard Next.js 5 halaman.",
-        en: "Built an AI root-cause analysis proof-of-concept service (FastAPI + Groq, gpt-oss-120b) converting multi-system telecom logs into structured JSON with root causes, summaries, and prioritized recommendations. Modeled 3 complaint categories across 8 backend systems with multi-hop flows, 8 REST endpoints, Python ABC LogDataSource abstraction, and Railway deployment integrated into a 5-page Next.js dashboard."
+        en: "Built a proof-of-concept AI root-cause-analysis service (FastAPI + Groq, gpt-oss-120b) that turns multi-system telco logs into structured JSON with potential root causes, a summary, and prioritized recommendations. Modeled root-cause-analysis logic for 3 complaint categories across 8 backend systems with multi-hop log flows, 8 REST API endpoints, Python ABC-based LogDataSource abstraction, and Railway deployment integrated into a 5-page Next.js dashboard."
       }),
       technologies: ["FastAPI", "Groq API", "gpt-oss-120b", "Python", "Pydantic", "Railway", "Next.js"],
       metrics: t({ 
@@ -37,20 +37,20 @@ const ProjectDetailPage = () => {
       id: 2,
       title: t({ 
         id: "Chatbot RAG COVID-19 Berbahasa Indonesia", 
-        en: "Indonesian COVID-19 RAG Chatbot" 
+        en: "Indonesian-Language COVID-19 RAG Chatbot" 
       }),
       category: "AI/LLM · RAG Systems",
       role: t({ id: "AI Engineer (Proyek Magang)", en: "AI Engineer (Internship Project)" }),
-      duration: "Agu 2025 – Nov 2025",
+      duration: t({ id: "Agu 2025 – Nov 2025", en: "Aug 2025 – Nov 2025" }),
       company: "ProCodeCG",
       description: t({
         id: "Membangun chatbot RAG COVID-19 berbahasa Indonesia menggunakan LangChain, FAISS, dan Sentence Transformers (multilingual MPNet), dengan model Mistral 7B-Instruct lokal via Ollama. Merancang fallback 4 tingkat dengan timeout, filter input kata kunci, pemeriksaan keamanan keluaran, dan UI Streamlit dengan chat multi-ruang dan debug retrieval.",
-        en: "Built an Indonesian COVID-19 RAG chatbot using LangChain, FAISS, and Sentence Transformers (multilingual MPNet) with local Mistral 7B-Instruct via Ollama. Designed a 4-tier fallback with timeouts, keyword input filters, output safety checks, and a Streamlit UI with multi-room chat and retrieval debugging."
+        en: "Built an Indonesian-language COVID-19 RAG chatbot using LangChain, FAISS, and Sentence Transformers (multilingual MPNet), with a local Mistral 7B-Instruct model served via Ollama. Designed a 4-tier fallback with timeouts, keyword-based input filter, output safety check, and a Streamlit interface with multi-room chat and retrieval debugging."
       }),
       technologies: ["LangChain", "FAISS", "Sentence Transformers", "Mistral 7B", "Ollama", "Streamlit", "Python"],
       metrics: t({ 
         id: "Latensi retrieval <0.5 detik · Waktu respons <10 detik · 18 kasus uji", 
-        en: "Retrieval latency <0.5s · Response time <10s · 18 test cases" 
+        en: "Retrieval latency <0.5s · End-to-end response time <10s · 18 test cases" 
       }),
       image: "/ragchatbot.png",
       links: {
@@ -62,20 +62,20 @@ const ProjectDetailPage = () => {
       id: 3,
       title: t({ 
         id: "Sistem Pemantauan Lansia Real-Time — YOLOv7", 
-        en: "Elderly Real-Time Monitoring System — YOLOv7" 
+        en: "Elderly Real-Time Monitoring System — Undergraduate Thesis — Computer Vision" 
       }),
       category: "Computer Vision · Skripsi",
-      role: t({ id: "AI Engineer (Skripsi)", en: "AI Engineer (Thesis)" }),
+      role: t({ id: "AI Engineer (Skripsi)", en: "AI Engineer (Undergraduate Thesis)" }),
       duration: "2022 – 2023",
       company: "Telkom University",
       description: t({
         id: "Mengembangkan sistem deteksi lansia vs. non-lansia secara real-time menggunakan YOLOv7 dan PyTorch, dilatih pada dataset 1.200 gambar yang dianotasi dan diaugmentasi dengan Roboflow. Mengevaluasi prediksi dengan confusion matrix dan diuji langsung melalui webcam stabil pada jarak 4–6 m, pencahayaan 24–65 lux, dan sudut 0°–30°.",
-        en: "Developed a real-time elderly vs. non-elderly detection system using YOLOv7 and PyTorch, trained on a dataset of 1,200 images annotated and augmented with Roboflow. Evaluated with a confusion matrix and tested live via webcam stably at 4–6m distance, 24–65 lux lighting, and 0°–30° angles."
+        en: "Developed a real-time elderly vs. non-elderly detection system using YOLOv7 and PyTorch, trained on a 1,200-image dataset annotated and augmented using Roboflow. Evaluated elderly vs. non-elderly predictions using a confusion matrix, achieving 94% accuracy, 100% precision, 89% recall, and 94% F1-score on the validation set. Tested live via webcam; detection was stable at 4–6 m, 24–65 lux, and 0°–30°."
       }),
       technologies: ["YOLOv7", "PyTorch", "Roboflow", "Google Colab", "Python", "Confusion Matrix"],
       metrics: t({ 
         id: "Akurasi 94% · Presisi 100% · Recall 89% · F1-Score 94%", 
-        en: "94% Accuracy · 100% Precision · 89% Recall · 94% F1-Score" 
+        en: "94% Accuracy · 100% Precision · 89% Recall · 94% F1-score" 
       }),
       image: "/yolov7dashboard.jpeg",
       links: {
@@ -87,20 +87,20 @@ const ProjectDetailPage = () => {
       id: 4,
       title: t({ 
         id: "Mentoring Deteksi Kualitas Beras — YOLOv8 & SAHI", 
-        en: "Rice Quality Detection Mentoring — YOLOv8 & SAHI" 
+        en: "Rice-Quality Detection System Mentoring — YOLOv8 & SAHI" 
       }),
       category: "Computer Vision · Mentoring",
-      role: t({ id: "Mentor AI (Freelance)", en: "AI Mentor (Freelance)" }),
-      duration: "Jan 2024 – Des 2024",
+      role: t({ id: "Mentor AI (Freelance)", en: "Freelance AI Mentor" }),
+      duration: t({ id: "Jan 2024 – Des 2024", en: "Jan 2024 – Dec 2024" }),
       company: t({ id: "Jarak Jauh", en: "Remote" }),
       description: t({
         id: "Membimbing mahasiswa tingkat akhir dalam mengembangkan sistem deteksi kualitas beras menggunakan YOLOv8 dan SAHI (Slicing Aided Hyper Inference) untuk objek berukuran kecil, serta memandu alur anotasi dan augmentasi dataset dengan Roboflow.",
-        en: "Mentored final-year students in developing a rice quality detection system using YOLOv8 and SAHI (Slicing Aided Hyper Inference) for small-scale objects, while guiding dataset annotation and augmentation workflows with Roboflow."
+        en: "Mentored final-year students in developing a rice-quality detection system using YOLOv8 and SAHI. Guided dataset annotation and augmentation workflows using Roboflow."
       }),
       technologies: ["YOLOv8", "SAHI", "Roboflow", "PyTorch", "Python", "Computer Vision"],
       metrics: t({ 
         id: "Mentoring Tugas Akhir · Small Object Detection (SAHI)", 
-        en: "Capstone Mentoring · Small Object Detection (SAHI)" 
+        en: "Final-year mentoring · Small object detection (SAHI)" 
       }),
       image: "/yolov7dashboard.jpeg",
       links: {

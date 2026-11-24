@@ -35,7 +35,7 @@ const Skills = () => {
           'Groq API', 
           'Ollama', 
           'Prompt Engineering', 
-          'Rule-based Input/Output Guardrails', 
+          'Input/Output Guardrails (rule-based)', 
           'JSON Output Parsing'
         ]
       })

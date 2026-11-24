@@ -8,12 +8,12 @@ const Experience = () => {
       company: 'Quorvin',
       role: t({ id: 'AI Engineer (Freelance)', en: 'AI Engineer (Freelance)' }),
       location: t({ id: 'Jarak Jauh', en: 'Remote' }),
-      period: 'Nov 2025 – Okt 2026',
+      period: t({ id: 'Nov 2025 – Okt 2026', en: 'Nov 2025 – Oct 2026' }),
       projects: [
         {
           title: t({ 
             id: 'InsightOps — Produk Analitik Log Telekomunikasi Milik Perusahaan', 
-            en: 'InsightOps — Proprietary Telecom Log Analytics Product' 
+            en: 'InsightOps — Company-Owned Telecom Log Analytics Product' 
           }),
           tech: 'FastAPI · Groq · gpt-oss-120b · Python · Pydantic · Railway · Next.js',
           achievements: t({
@@ -24,10 +24,10 @@ const Experience = () => {
               'Men-deploy backend di Railway (data sampel yang dianonimkan) sebagai proof of concept dan mengintegrasikannya ke dashboard Next.js 5 halaman milik InsightOps, produk yang ditujukan bagi calon klien.'
             ],
             en: [
-              'Built an AI-powered root-cause analysis proof-of-concept service (FastAPI + Groq, gpt-oss-120b) converting multi-system telecom logs into structured JSON with potential root causes, summaries, and prioritized recommendations.',
-              'Modeled root-cause analysis logic for 3 complaint categories across 8 backend systems, inserting multi-hop log flows into prompts while sending only failed logs, with strict prompt constraints to minimize ungrounded outputs.',
-              'Engineered 8 REST API endpoints (FastAPI, Pydantic) for log retrieval, AI analysis, ticket CRUD, and dashboard statistics, designing a Python ABC-based LogDataSource abstraction (local JSON implemented; Splunk planned).',
-              'Deployed backend on Railway (anonymized sample data) as a proof of concept and integrated it into the InsightOps 5-page Next.js dashboard intended for prospective clients.'
+              'Built a proof-of-concept AI root-cause-analysis service (FastAPI + Groq, gpt-oss-120b) that turns multi-system telco logs into structured JSON with potential root causes, a summary, and prioritized recommendations.',
+              'Modeled root-cause-analysis logic for 3 complaint categories across 8 backend systems, injecting the multi-hop log flow of each category into the prompt and sending only failed logs, with prompt constraints to limit unsupported outputs.',
+              'Built 8 REST API endpoints (FastAPI, Pydantic) for log retrieval, AI analysis, ticket CRUD, and dashboard statistics, and designed a Python ABC-based LogDataSource abstraction (local JSON implemented; Splunk planned).',
+              'Deployed the backend on Railway (anonymized sample data) as a proof of concept and integrated it into the 5-page Next.js dashboard of InsightOps, a product intended for prospective clients.'
             ]
           })
         }
@@ -37,12 +37,12 @@ const Experience = () => {
       company: 'ProCodeCG',
       role: t({ id: 'AI Engineer (Proyek Magang)', en: 'AI Engineer (Internship Project)' }),
       location: '',
-      period: 'Agu 2025 – Nov 2025',
+      period: t({ id: 'Agu 2025 – Nov 2025', en: 'Aug 2025 – Nov 2025' }),
       projects: [
         {
           title: t({ 
             id: 'Chatbot RAG COVID-19 Berbahasa Indonesia', 
-            en: 'Indonesian COVID-19 RAG Chatbot' 
+            en: 'Indonesian-Language COVID-19 RAG Chatbot' 
           }),
           tech: 'LangChain · FAISS · Sentence Transformers (multilingual MPNet) · Mistral 7B · Ollama · Streamlit · Python',
           achievements: t({
@@ -53,10 +53,10 @@ const Experience = () => {
               'Membangun antarmuka Streamlit dengan chat multi-ruang, penyimpanan riwayat, dan halaman debug retrieval.'
             ],
             en: [
-              'Built an Indonesian COVID-19 RAG chatbot using LangChain, FAISS, and Sentence Transformers (multilingual MPNet), powered by a local Mistral 7B-Instruct model running via Ollama.',
-              'Engineered a 4-tier fallback mechanism (preset answers for basic questions, template-based responses, LLM generation, final fallback) with timeouts, input keyword filters, and output safety checks to keep the bot strictly on-topic.',
-              'Evaluated against 18 manually designed test cases (16 full pass, 1 partial, 1 fail); achieved retrieval latency under 0.5s and end-to-end response time under 10s.',
-              'Developed a Streamlit interface featuring multi-room chat, chat history persistence, and a retrieval debugging page.'
+              'Built an Indonesian-language COVID-19 RAG chatbot using LangChain, FAISS, and Sentence Transformers (multilingual MPNet), with a local Mistral 7B-Instruct model served via Ollama.',
+              'Designed a 4-tier fallback (preset answers for basic questions, templated answers, LLM generation, final fallback) with timeouts, plus a keyword-based input filter and an output safety check to keep the bot on-topic.',
+              'Evaluated with 18 manually designed test cases (16 full passes, 1 partial pass, 1 failure); observed retrieval latency below 0.5s and end-to-end response time below 10s.',
+              'Built a Streamlit interface with multi-room chat, history persistence, and a retrieval debug page.'
             ]
           })
         }
@@ -64,14 +64,14 @@ const Experience = () => {
     },
     {
       company: t({ id: 'Freelance', en: 'Freelance' }),
-      role: t({ id: 'Mentor AI', en: 'AI Mentor' }),
+      role: t({ id: 'Mentor AI', en: 'Freelance AI Mentor' }),
       location: t({ id: 'Jarak Jauh', en: 'Remote' }),
-      period: 'Jan 2024 – Des 2024',
+      period: t({ id: 'Jan 2024 – Des 2024', en: 'Jan 2024 – Dec 2024' }),
       projects: [
         {
           title: t({ 
             id: 'Mentoring Computer Vision — Deteksi Kualitas Beras', 
-            en: 'Computer Vision Mentoring — Rice Quality Detection' 
+            en: 'Rice-Quality Detection System Mentoring' 
           }),
           tech: 'YOLOv8 · SAHI · Roboflow · PyTorch · Computer Vision',
           achievements: t({
@@ -80,7 +80,7 @@ const Experience = () => {
               'Memandu alur anotasi dan augmentasi dataset menggunakan Roboflow.'
             ],
             en: [
-              'Mentored final-year university students in developing a rice quality detection system using YOLOv8 and SAHI.',
+              'Mentored final-year students in developing a rice-quality detection system using YOLOv8 and SAHI.',
               'Guided dataset annotation and augmentation workflows using Roboflow.'
             ]
           })

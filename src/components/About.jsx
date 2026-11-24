@@ -16,7 +16,7 @@ const About = () => {
               <h2 className="text-[clamp(26px,3.2vw,34px)]">
                 {t({ 
                   id: 'AI Engineer | Computer Vision & Sistem LLM/RAG', 
-                  en: 'AI Engineer | Computer Vision & LLM/RAG Systems' 
+                  en: 'AI Engineer | LLM/RAG Systems' 
                 })}
               </h2>
             </div>
@@ -24,26 +24,26 @@ const About = () => {
               <p className="text-ink-soft text-[16.5px]">
                 {t({
                   id: 'AI Engineer dengan pengalaman langsung membangun sistem LLM/RAG, mulai dari perancangan prompt dan evaluasi hingga deployment. Membangun backend proof-of-concept analisis akar masalah (root-cause analysis) untuk log telekomunikasi (FastAPI + Groq) dan chatbot RAG berbahasa Indonesia (LangChain, FAISS, Mistral 7B via Ollama), serta pengalaman computer vision (skripsi YOLOv7, mentoring YOLOv8). Berfokus pada aplikasi LLM yang andal dengan Python.',
-                  en: 'AI Engineer with hands-on experience building LLM/RAG systems, from prompt engineering and evaluation to deployment. Built a root-cause analysis proof-of-concept backend for telecom logs (FastAPI + Groq) and an Indonesian-language RAG chatbot (LangChain, FAISS, Mistral 7B via Ollama), along with computer vision experience (YOLOv7 thesis, YOLOv8 mentoring). Focused on reliable LLM applications with Python.'
+                  en: 'AI Engineer with hands-on experience building LLM/RAG systems, from prompt design and evaluation through deployment. Built a proof-of-concept root-cause-analysis backend for telco logs (FastAPI + Groq) and an Indonesian-language RAG chatbot (LangChain, FAISS, Mistral 7B via Ollama), with additional computer vision experience (YOLOv7 thesis, YOLOv8 mentoring). Focused on reliable LLM applications in Python.'
                 })}
               </p>
               <p className="text-ink-soft text-[16.5px]">
                 {t({
                   id: 'Lulusan Sarjana Teknik — Teknik Komputer dari Telkom University (IPK 3,20/4,00) dengan konsentrasi Rekayasa Perangkat Lunak, AI, dan Data Engineering. Terus memperdalam keahlian terapan melalui pelatihan seperti Peserta GenAI Learning Path di Alibaba Cloud Indonesia GenAI Hackathon 2025 (mengimplementasikan model Qwen via Alibaba Cloud Model Studio API).',
-                  en: 'Bachelor of Engineering in Computer Engineering graduate from Telkom University (GPA 3.20/4.00) with concentration in Software Engineering, AI, and Data Engineering. Continuously advancing applied skills through programs such as GenAI Learning Path at Alibaba Cloud Indonesia GenAI Hackathon 2025 (implementing Qwen models via Alibaba Cloud Model Studio API).'
+                  en: 'Bachelor of Engineering in Computer Engineering graduate from Telkom University, Indonesia (GPA 3.20/4.00, Concentration: Software Engineering, AI, Data Engineering). Participated in the GenAI Learning Path at Alibaba Cloud Indonesia GenAI Hackathon 2025, building a hands-on LLM implementation project using Qwen models through the Alibaba Cloud Model Studio API.'
                 })}
               </p>
               <p className="text-ink-soft text-[16.5px]">
                 {t({
                   id: 'Berfokus pada pengembangan aplikasi AI yang andal dan terukur — mulai dari evaluasi metrik performa (Presisi, Recall, F1-Score, Confusion Matrix, hingga latensi sistem end-to-end), perancangan input/output guardrails berbasis aturan, hingga deployment backend REST API dengan Python, FastAPI, dan Railway.',
-                  en: 'Focused on developing reliable and measurable AI applications — from performance metric evaluation (Precision, Recall, F1-Score, Confusion Matrix, and end-to-end latency), rule-based input/output guardrails design, to backend REST API deployment with Python, FastAPI, and Railway.'
+                  en: 'Focused on developing reliable, measurable AI applications — from evaluating performance metrics (Precision, Recall, F1-Score, Confusion Matrix, and end-to-end response latency), designing rule-based input/output guardrails, to deploying backend REST APIs with Python, FastAPI, and Railway.'
                 })}
               </p>
             </div>
             <p className="mt-6 pl-5 border-l-2 border-yellow font-heading text-[17px] text-ink font-medium">
               {t({
                 id: '"Berfokus pada aplikasi LLM yang andal dengan Python dan sistem computer vision yang akurat."',
-                en: '"Focused on reliable LLM applications with Python and accurate computer vision systems."'
+                en: '"Focused on reliable LLM applications in Python and accurate computer vision systems."'
               })}
             </p>
           </div>
