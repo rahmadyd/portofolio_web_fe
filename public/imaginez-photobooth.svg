@@ -1,0 +1,90 @@
+<svg width="800" height="500" viewBox="0 0 800 500" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="500" fill="#0C0E14"/>
+  <defs>
+    <linearGradient id="bgGlow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#181B26"/>
+      <stop offset="100%" stop-color="#0C0E14"/>
+    </linearGradient>
+    <linearGradient id="stripGlow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#EC4899"/>
+      <stop offset="50%" stop-color="#8B5CF6"/>
+      <stop offset="100%" stop-color="#3B82F6"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="500" fill="url(#bgGlow)"/>
+
+  <!-- Ambient light blobs -->
+  <circle cx="280" cy="220" r="140" fill="#EC4899" opacity="0.12" filter="blur(60px)"/>
+  <circle cx="520" cy="260" r="150" fill="#6366F1" opacity="0.14" filter="blur(60px)"/>
+
+  <!-- Photobooth Strip Illustration (Angled) -->
+  <g transform="translate(180, 50) rotate(-6)">
+    <!-- Strip Body -->
+    <rect x="0" y="0" width="130" height="380" rx="10" fill="#FFFFFF" shadow="0 20px 40px rgba(0,0,0,0.5)"/>
+    
+    <!-- Photo slot 1 -->
+    <rect x="12" y="14" width="106" height="80" rx="5" fill="#1E293B"/>
+    <circle cx="65" cy="50" r="16" fill="#38BDF8" opacity="0.6"/>
+    <path d="M45 84C45 74 53 68 65 68C77 68 85 74 85 84H45Z" fill="#38BDF8" opacity="0.8"/>
+    
+    <!-- Photo slot 2 -->
+    <rect x="12" y="104" width="106" height="80" rx="5" fill="#1E293B"/>
+    <circle cx="65" cy="140" r="16" fill="#F43F5E" opacity="0.6"/>
+    <path d="M45 174C45 164 53 158 65 158C77 158 85 164 85 174H45Z" fill="#F43F5E" opacity="0.8"/>
+
+    <!-- Photo slot 3 -->
+    <rect x="12" y="194" width="106" height="80" rx="5" fill="#1E293B"/>
+    <circle cx="65" cy="230" r="16" fill="#10B981" opacity="0.6"/>
+    <path d="M45 264C45 254 53 248 65 248C77 248 85 254 85 264H45Z" fill="#10B981" opacity="0.8"/>
+
+    <!-- Strip footer text -->
+    <text x="65" y="315" fill="#0F172A" font-family="system-ui, sans-serif" font-size="11" font-weight="700" text-anchor="middle" letter-spacing="1">imaginez</text>
+    <text x="65" y="332" fill="#64748B" font-family="system-ui, sans-serif" font-size="8" font-weight="500" text-anchor="middle">PHOTOBOOTH</text>
+  </g>
+
+  <!-- Right Side Feature Highlights -->
+  <g transform="translate(390, 110)">
+    <!-- App Badge -->
+    <rect x="0" y="0" width="125" height="28" rx="14" fill="#1E293B" stroke="#334155"/>
+    <text x="14" y="18" fill="#F43F5E" font-family="system-ui, sans-serif" font-size="11" font-weight="700">✦</text>
+    <text x="30" y="18" fill="#F1F5F9" font-family="system-ui, sans-serif" font-size="11" font-weight="600">Web Photobooth</text>
+
+    <!-- Main Title -->
+    <text x="0" y="65" fill="#FFFFFF" font-family="system-ui, sans-serif" font-size="34" font-weight="800">imaginez</text>
+    
+    <!-- Subtitle / Privacy tag -->
+    <text x="0" y="98" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="14" font-weight="400">
+      Privacy-First Client-Side Photo Processing
+    </text>
+
+    <!-- Tech tags -->
+    <g transform="translate(0, 130)">
+      <rect x="0" y="0" width="80" height="26" rx="6" fill="#1E293B" stroke="#334155"/>
+      <text x="40" y="17" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="11" font-weight="600" text-anchor="middle">Next.js</text>
+
+      <rect x="90" y="0" width="105" height="26" rx="6" fill="#1E293B" stroke="#334155"/>
+      <text x="142" y="17" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="11" font-weight="600" text-anchor="middle">HTML5 Canvas</text>
+
+      <rect x="205" y="0" width="85" height="26" rx="6" fill="#1E293B" stroke="#334155"/>
+      <text x="247" y="17" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="11" font-weight="600" text-anchor="middle">Supabase</text>
+
+      <rect x="0" y="36" width="135" height="26" rx="6" fill="#1E293B" stroke="#334155"/>
+      <text x="67" y="53" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="11" font-weight="600" text-anchor="middle">Cloudflare Workers</text>
+
+      <rect x="145" y="36" width="90" height="26" rx="6" fill="#1E293B" stroke="#334155"/>
+      <text x="190" y="53" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="11" font-weight="600" text-anchor="middle">TypeScript</text>
+    </g>
+
+    <!-- Key Feature Pills -->
+    <g transform="translate(0, 220)">
+      <circle cx="6" cy="6" r="4" fill="#10B981"/>
+      <text x="18" y="10" fill="#CBD5E1" font-family="system-ui, sans-serif" font-size="12">Foto diproses 100% di perangkat (Zero-server storage)</text>
+
+      <circle cx="6" cy="30" r="4" fill="#38BDF8"/>
+      <text x="18" y="34" fill="#CBD5E1" font-family="system-ui, sans-serif" font-size="12">Live camera preview, galeri slot, & retake per slot</text>
+
+      <circle cx="6" cy="54" r="4" fill="#F43F5E"/>
+      <text x="18" y="58" fill="#CBD5E1" font-family="system-ui, sans-serif" font-size="12">Dashboard admin: template PNG, slot editor & analytics</text>
+    </g>
+  </g>
+</svg>

@@ -99,6 +99,32 @@ const ProjectDetailPage = () => {
       id: 4,
       categoryKey: 'web-dev',
       title: t({
+        id: "imaginez — Web Photobooth (Privacy-First)",
+        en: "imaginez — Web Photobooth (Privacy-First)"
+      }),
+      category: "Web Development · Full-Stack",
+      role: t({ id: "Full-Stack Developer", en: "Full-Stack Developer" }),
+      duration: t({ id: "2026", en: "2026" }),
+      company: t({ id: "Proyek Mandiri", en: "Personal Project" }),
+      description: t({
+        id: "Aplikasi photobooth berbasis web modern dengan arsitektur privacy-first: foto pengguna diproses sepenuhnya di sisi perangkat (HTML5 Canvas) dan tidak pernah dikirim atau disimpan di server. Mendukung pemilihan template, live camera preview dengan aspect-ratio sinkron, upload galeri tanpa kamera, retake per slot, ekspor PNG/JPG, Web Share API, serta dashboard admin (Supabase) yang di-deploy via OpenNext ke Cloudflare Workers.",
+        en: "Modern privacy-first web photobooth application: user photos are processed 100% client-side (HTML5 Canvas) and never sent or stored on servers. Features template selection, synchronized live camera preview, gallery slot filling without camera, per-slot retakes, PNG/JPG export, Web Share API, and an admin dashboard (Supabase) deployed via OpenNext to Cloudflare Workers."
+      }),
+      technologies: ["Next.js (App Router)", "TypeScript", "Tailwind CSS", "HTML5 Canvas", "Supabase", "Cloudflare Workers", "Zod", "Vitest", "Playwright"],
+      metrics: t({
+        id: "Zero-Server Photo Storage · Client-side Canvas Compositing · OpenNext Cloudflare Workers",
+        en: "Zero-Server Photo Storage · Client-side Canvas Compositing · OpenNext Cloudflare Workers"
+      }),
+      image: "/imaginez-photobooth.svg",
+      links: {
+        github: null,
+        demo: null
+      }
+    },
+    {
+      id: 5,
+      categoryKey: 'web-dev',
+      title: t({
         id: "Website Profil Perusahaan Quorvin",
         en: "Quorvin Company Profile Website"
       }),
@@ -122,7 +148,7 @@ const ProjectDetailPage = () => {
       }
     },
     {
-      id: 5,
+      id: 6,
       categoryKey: 'data-analytics',
       title: t({
         id: "Data Analyst Intern — Kimia Farma Dashboard",
