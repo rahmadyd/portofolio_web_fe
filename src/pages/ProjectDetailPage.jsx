@@ -66,7 +66,7 @@ const ProjectDetailPage = () => {
       image: "/ragchatbot.png",
       links: {
         github: "https://github.com/rahmadyd/chatbot_covid19_intern_procodecg",
-        demo: null
+        demo: "https://drive.google.com/file/d/12N4cUQN3WQd4ILIJNayCmvijELFS779K/view?usp=sharing"
       }
     },
     {
