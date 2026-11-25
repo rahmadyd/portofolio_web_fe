@@ -396,9 +396,9 @@ const ProjectDetailPage = () => {
                           href={project.links.huggingface}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="flex-1 text-center py-2.5 px-3 text-[13px] font-semibold rounded-[8px] bg-white border border-border-custom text-ink transition-all duration-200 hover:border-orange-400 hover:text-orange-500 hover:bg-orange-50"
+                          className="flex-1 text-center py-2.5 px-3 text-[13px] font-semibold rounded-[8px] bg-yellow-400 border border-yellow-400 text-yellow-900 transition-all duration-200 hover:bg-yellow-500 hover:border-yellow-500 hover:shadow-md flex items-center justify-center gap-1.5"
                         >
-                          🤗 Model
+                          🤗 Hugging Face
                         </a>
                       )}
                     </div>
