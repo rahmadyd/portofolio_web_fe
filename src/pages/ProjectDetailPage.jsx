@@ -96,6 +96,32 @@ const ProjectDetailPage = () => {
       }
     },
     {
+      id: 7,
+      categoryKey: 'computer-vision',
+      title: t({ 
+        id: "YOLOv7 Elderly Detection — Web App Deployment", 
+        en: "YOLOv7 Elderly Detection — Web App Deployment" 
+      }),
+      category: "Computer Vision · Full-Stack",
+      role: t({ id: "AI Engineer (Proyek Mandiri)", en: "AI Engineer (Personal Project)" }),
+      duration: "2026",
+      company: t({ id: "Proyek Mandiri", en: "Personal Project" }),
+      description: t({
+        id: "Membangun aplikasi web full-stack untuk deployment model YOLOv7 custom yang dikonversi ke format ONNX. Backend FastAPI menerima upload gambar, menjalankan inference ONNX Runtime, mengembalikan bounding box dalam format JSON, dan mencatat hasil deteksi ke CSV tanpa menyimpan gambar di server. Frontend React menampilkan preview gambar, bounding box overlay, confidence score, dan tabel history hasil deteksi.",
+        en: "Built a full-stack web application to deploy a custom YOLOv7 model converted to ONNX format. FastAPI backend accepts image uploads, runs inference via ONNX Runtime, returns bounding boxes as JSON, and logs detection results to CSV without storing uploaded images. React frontend displays image preview, bounding box overlay, confidence scores, and a detection history table."
+      }),
+      technologies: ["YOLOv7", "ONNX Runtime", "FastAPI", "React", "Vite", "Tailwind CSS", "OpenCV", "Python"],
+      metrics: t({ 
+        id: "ONNX inference · REST API · CSV tracking · Zero image storage", 
+        en: "ONNX inference · REST API · CSV tracking · Zero image storage" 
+      }),
+      image: "/yolov7dashboard.jpeg",
+      links: {
+        github: "https://github.com/rahmadyd/yolov7_elderly_detect_deploy",
+        demo: null
+      }
+    },
+    {
       id: 4,
       categoryKey: 'web-dev',
       title: t({
