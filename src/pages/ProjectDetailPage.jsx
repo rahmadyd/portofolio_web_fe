@@ -306,7 +306,7 @@ const ProjectDetailPage = () => {
                     </div>
 
                     {/* Description */}
-                    <p className="text-[14.5px] text-ink-soft mb-4 line-clamp-3 leading-relaxed flex-1">
+                    <p className="text-[14.5px] text-ink-soft mb-4 leading-relaxed">
                       {project.description}
                     </p>
 
