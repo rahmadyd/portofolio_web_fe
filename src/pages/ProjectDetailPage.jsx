@@ -92,6 +92,7 @@ const ProjectDetailPage = () => {
       image: "/yolov7_realtime.jpg",
       links: {
         github: "https://github.com/rahmadyd/yolov7_elderlycaringsystem",
+        huggingface: "https://huggingface.co/rahmadyd/yolov7-elderlydetection",
         demo: null
       }
     },
@@ -388,6 +389,16 @@ const ProjectDetailPage = () => {
                           className="flex-1 text-center py-2.5 px-3 text-[13px] font-semibold rounded-[8px] bg-white border border-border-custom text-ink transition-all duration-200 hover:border-blue hover:text-blue hover:bg-blue-soft"
                         >
                           GitHub
+                        </a>
+                      )}
+                      {project.links.huggingface && (
+                        <a 
+                          href={project.links.huggingface}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="flex-1 text-center py-2.5 px-3 text-[13px] font-semibold rounded-[8px] bg-white border border-border-custom text-ink transition-all duration-200 hover:border-orange-400 hover:text-orange-500 hover:bg-orange-50"
+                        >
+                          🤗 Model
                         </a>
                       )}
                     </div>
