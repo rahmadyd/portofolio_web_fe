@@ -89,7 +89,7 @@ const ProjectDetailPage = () => {
         id: "Akurasi 94% · Presisi 100% · Recall 89% · F1-Score 94%", 
         en: "94% Accuracy · 100% Precision · 89% Recall · 94% F1-score" 
       }),
-      image: "/yolov7dashboard.jpeg",
+      image: "/yolov7_realtime.jpg",
       links: {
         github: "https://github.com/rahmadyd/yolov7_elderlycaringsystem",
         demo: null
