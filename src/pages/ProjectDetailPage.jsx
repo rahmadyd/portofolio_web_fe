@@ -71,32 +71,6 @@ const ProjectDetailPage = () => {
     },
     {
       id: 3,
-      categoryKey: 'ai-llm',
-      title: t({ 
-        id: "Proyek Implementasi LLM Qwen — Alibaba Cloud GenAI Hackathon", 
-        en: "Qwen LLM Implementation Project — Alibaba Cloud GenAI Hackathon" 
-      }),
-      category: "AI/LLM · Model Studio",
-      role: t({ id: "Peserta GenAI Learning Path", en: "GenAI Learning Path Participant" }),
-      duration: t({ id: "Feb 2025 – Mei 2025", en: "Feb 2025 – May 2025" }),
-      company: "Alibaba Cloud × GoTo Group (DTS)",
-      description: t({
-        id: "Membangun proyek implementasi LLM hands-on menggunakan model Qwen melalui Alibaba Cloud Model Studio API sebagai bagian dari Digital Talent Scholarship × Alibaba Cloud × GoTo Group program, mencakup prompt engineering, integrasi model API, dan penerapan konsep GenAI terapan.",
-        en: "Built a hands-on LLM implementation project using Qwen models through the Alibaba Cloud Model Studio API as part of the Digital Talent Scholarship × Alibaba Cloud × GoTo Group program, covering prompt engineering, model API integration, and applied GenAI concepts."
-      }),
-      technologies: ["Qwen Models", "Alibaba Cloud Model Studio", "Prompt Engineering", "Python", "GenAI"],
-      metrics: t({ 
-        id: "Hands-on LLM Implementation · Model Studio API", 
-        en: "Hands-on LLM Implementation · Model Studio API" 
-      }),
-      image: "/dummy-qwen-llm.svg",
-      links: {
-        github: null,
-        demo: null
-      }
-    },
-    {
-      id: 4,
       categoryKey: 'computer-vision',
       title: t({ 
         id: "Sistem Pemantauan Lansia Real-Time — YOLOv7", 
@@ -122,33 +96,7 @@ const ProjectDetailPage = () => {
       }
     },
     {
-      id: 5,
-      categoryKey: 'computer-vision',
-      title: t({ 
-        id: "Mentoring Deteksi Kualitas Beras — YOLOv8 & SAHI", 
-        en: "Rice-Quality Detection System Mentoring — YOLOv8 & SAHI" 
-      }),
-      category: "Computer Vision · Mentoring",
-      role: t({ id: "Mentor AI (Freelance)", en: "Freelance AI Mentor" }),
-      duration: t({ id: "Jan 2024 – Des 2024", en: "Jan 2024 – Dec 2024" }),
-      company: t({ id: "Jarak Jauh", en: "Remote" }),
-      description: t({
-        id: "Membimbing mahasiswa tingkat akhir dalam mengembangkan sistem deteksi kualitas beras menggunakan YOLOv8 dan SAHI (Slicing Aided Hyper Inference) untuk objek berukuran kecil, serta memandu alur anotasi dan augmentasi dataset dengan Roboflow.",
-        en: "Mentored final-year students in developing a rice-quality detection system using YOLOv8 and SAHI. Guided dataset annotation and augmentation workflows using Roboflow."
-      }),
-      technologies: ["YOLOv8", "SAHI", "Roboflow", "PyTorch", "Python", "Computer Vision"],
-      metrics: t({ 
-        id: "Mentoring Tugas Akhir · Small Object Detection (SAHI)", 
-        en: "Final-year mentoring · Small object detection (SAHI)" 
-      }),
-      image: "/dummy-rice-cv.svg",
-      links: {
-        github: null,
-        demo: null
-      }
-    },
-    {
-      id: 6,
+      id: 4,
       categoryKey: 'web-dev',
       title: t({
         id: "Website Profil Perusahaan Quorvin",
@@ -174,7 +122,7 @@ const ProjectDetailPage = () => {
       }
     },
     {
-      id: 7,
+      id: 5,
       categoryKey: 'data-analytics',
       title: t({
         id: "Data Analyst Intern — Kimia Farma Dashboard",
