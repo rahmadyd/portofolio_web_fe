@@ -115,9 +115,9 @@ const ProjectDetailPage = () => {
         id: "Zero-Server Photo Storage · Client-side Canvas Compositing · OpenNext Cloudflare Workers",
         en: "Zero-Server Photo Storage · Client-side Canvas Compositing · OpenNext Cloudflare Workers"
       }),
-      image: "/imaginez-photobooth.svg",
+      image: "/imaginez.png",
       links: {
-        website: "https://imaginezee.xyz",
+        website: "https://www.imaginezee.xyz",
         github: null
       }
     },
