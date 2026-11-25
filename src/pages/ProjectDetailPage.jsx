@@ -91,7 +91,7 @@ const ProjectDetailPage = () => {
       }),
       image: "/yolov7dashboard.jpeg",
       links: {
-        github: "https://github.com/rahmadyd/yolov7_elderly_detect_deploy",
+        github: "https://github.com/rahmadyd/yolov7_elderlycaringsystem",
         demo: null
       }
     },
