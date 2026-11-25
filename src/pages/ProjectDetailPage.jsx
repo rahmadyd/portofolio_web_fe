@@ -117,8 +117,8 @@ const ProjectDetailPage = () => {
       }),
       image: "/imaginez-photobooth.svg",
       links: {
-        github: null,
-        demo: null
+        website: "https://imaginezee.xyz",
+        github: null
       }
     },
     {
